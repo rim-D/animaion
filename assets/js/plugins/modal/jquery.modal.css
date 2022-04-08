@@ -1,0 +1,144 @@
+/*==============================
+##modal
+ ==============================*/
+.blocker {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: auto;
+  width: 100%; height: 100%;
+  padding: 20px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.75);
+  text-align: center;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+.blocker:before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em;
+}
+.blocker.behind {
+  background-color: transparent;
+}
+.modal {
+  display: none;
+  position: relative;
+  background: #fff;
+  text-align: left;
+  vertical-align: middle;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+}
+.close_modalType1 {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/assets/images/btn_close.png);
+}
+
+
+/*학습자유의사항*/
+ .modal_notice {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  min-height: 892px; 
+}
+.modal_inner {
+  position: relative;
+  margin: 0 20px;
+}
+#modal_header {
+  height: 50px;
+  background-color: var(--main-color);
+  color: #fff;
+  margin-bottom: 26px;
+}
+#modal_header .modal_title {
+  font-size: 19px;
+  display: inline-block;
+  padding: 12px 0;
+} 
+#modal_header .infoBtn {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-52%);
+  border: 1px solid #fff;
+  font-size: 12px;
+  letter-spacing: -0.54px;
+  padding: 3px 5px;
+}
+#modal_header .close_btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+#modal_contents .tab ul li {
+  width: calc(100% / 3);
+}
+#modal_contents .tab_sec.sec01 > ul > li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5d5d5;
+}
+#modal_contents .tab_sec.sec01 > ul > li > .img_box {
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  border: 1px solid red;
+  margin: 32px;
+}
+#modal_contents .tab_sec.sec01 > ul > li > .img_box img {
+  width: auto;
+}
+#modal_contents .tab_sec.sec01 > ul > li > .text_box {
+  width: 100%;
+}
+#modal_contents .tab_sec.sec01 > ul > li > .text_box > ul {
+  width: 100%;
+  border: 1px solid red;
+}
+#modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li {
+  width: 50%;
+}
+#modal_contents .tab_sec.sec02 .img_box,
+#modal_contents .tab_sec.sec03 .img_box {
+  padding: 8% 0;
+}
+#modal_contents .tab_sec.sec02 .img_box img,
+#modal_contents .tab_sec.sec03 .img_box img  {
+  width: 100%;
+}
+
+
+/* 로그인 안내 */
+.modal_login_info {
+  width: 100%;
+  max-width: 480px;
+  height: 480px;
+}
+
+
+
+
+

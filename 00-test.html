@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>(알파코)시스템서비스팀_A</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/plugins/fontium.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/skin/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/skin/main_A.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/skin/contents.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/skin/popup.css">
+
+    <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/common_ui.js"></script>
+</head>
+
+<body>
+
+    <!-- #wrap -->
+    <div id="wrap">
+
+        <!-- #header -->
+        <div id="header">
+
+            <!-- tablet / mobile -->
+            <div id="gnb_wrap_tb">
+
+                <!-- tablet / mobile - (B type - bottom형) -->
+                <div class="gnb_wrap_inner">
+                    <div class="gnb_wrap">
+
+                        <h1 class="logo"><a href="#a"><img src="../assets/images/main/logo.png" alt="알파코로고"></a></h1>
+
+                    </div>
+                </div>
+                <!-- // tablet / mobile - (B type - bottom형) -->
+
+            </div>
+            <!-- // tablet / mobile -->
+
+            <!-- mobile - 하단 고정메뉴 -->
+            <ul class="nav_mb-bottom between">
+                <li><a href="index_typeA_basic.html"><span class="fonti um-home-o"></span>메인페이지</a></li>
+                <!-- 로그인 후 메인페이지 보임 -->
+                <li><a href="#" class="modal_open" data-idx="2"><img src="../assets/images/mobileNav_bottom01.svg"
+                            alt="학습자유의사항">학습자유의사항</a></li>
+                <li><a href="bbs_usersFaqListForm.html"><img src="../assets/images/mobileNav_bottom02.svg"
+                            alt="학습지원센터">학습지원센터</a></li>
+                <li><a href="mypage_myCrsing.html"><img src="../assets/images/mobileNav_bottom03.svg"
+                            alt="나의강의실">나의강의실</a></li>
+            </ul>
+            <!-- // mobile - 하단 고정메뉴 -->
+
+
+
+        </div>
+        <!-- //#header -->
+
+        <!-- #container -->
+        <div id="container">
+            <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+            <script type="importmap">
+                {
+                  "imports": {
+                    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"
+                  }
+                }
+            </script>
+            <style>
+                .login_wrap {
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .webgl {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+
+                .login_contants {
+                    position: relative;
+                    z-index: 999;
+                }
+            </style>
+            <div class="login_wrap between">
+                <canvas class="webgl"></canvas>
+
+                <div class="login_contants">
+                    <h2><strong>알파코</strong>온라인 학습센터 입니다.</h2>
+                    <form name="" id="" action="" method="">
+
+                        <ul class="loginArea">
+                            <li>
+                                <label for="p_usrid" class="blind">ID</label>
+                                <input type="text" id="p_usrid" name="p_usrid" placeholder="아이디" maxlength="50"
+                                    required>
+                            </li>
+                            <li>
+                                <label for="p_pwd" class="blind">비밀번호</label>
+                                <input type="password" id="p_pwd" name="p_pwd" placeholder="비밀번호" maxlength="50"
+                                    required>
+                            </li>
+                            <li>
+                                <label class="loginChk f14" for="chkSaveId">
+                                    <input type="checkbox" name="chkSaveId" id="chkSaveId" class="chkSaveId">아이디저장
+                                </label>
+                            </li>
+                        </ul>
+
+                        <ul class="btnArea">
+                            <li class="clearfix">
+                                <button type="button" class="btn44 btnPrimary loginBtn">로그인</button>
+                                <ul class="link">
+                                    <li><a href="userManage_userfindForm.html">아이디 찾기</a></li>
+                                    <li><a href="userManage_userfindForm.html">비밀번호 찾기</a></li>
+                                    <li><button type="button" class="modal_open" data-idx="1">로그인 안내</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="userManage_userAuthenticationForm.html"
+                                    class="btn44 btnGray memberJoinBtn">회원가입</a>
+                            </li>
+
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            var canvas = document.querySelector(".webgl");
+            var ctx = canvas.getContext("2d");
+            var ww = window.innerWidth;
+            var wh = window.innerHeight;
+            var hearts = [];
+
+            function init() {
+                requestAnimationFrame(render);
+
+                canvas.width = ww;
+                canvas.height = wh;
+
+                for (var i = 0; i < 100; i++) {
+                    hearts.push(new Heart());
+                }
+            }
+
+            function Heart() {
+                this.x = Math.random() * ww;
+                this.y = Math.random() * wh;
+                this.opacity = (Math.random() * 0.5) + 0.5;
+                this.vel = {
+                    x: (Math.random() - 0.5) * 4,
+                    y: (Math.random() - 0.5) * 4
+                };
+                this.targetScale = (Math.random() * 0.15) + 0.02;
+                this.scale = this.targetScale * Math.random();
+            }
+
+            Heart.prototype.update = function () {
+                this.x += this.vel.x;
+                this.y += this.vel.y;
+
+                this.scale += (this.targetScale - this.scale) * 0.01;
+                if (this.x - this.width > ww || this.x + this.width < 0) {
+                    this.scale = 0;
+                    this.x = Math.random() * ww;
+                }
+                if (this.y - this.height > wh || this.y + this.height < 0) {
+                    this.scale = 0;
+                    this.y = Math.random() * wh;
+                }
+                this.width = 473.8 * this.scale;
+                this.height = 408.6 * this.scale;
+            }
+
+            Heart.prototype.draw = function () {
+                ctx.globalAlpha = this.opacity;
+                ctx.drawImage(heartImage, this.x - this.width * 0.5, this.y - this.height * 0.5, this.width, this.height);
+            }
+
+            function render() {
+                ctx.clearRect(0, 0, ww, wh);
+                for (var i = 0; i < 100; i++) {
+                    hearts[i].update();
+                    hearts[i].draw();
+                }
+                requestAnimationFrame(render);
+            }
+
+            var heartImage = new Image();
+            heartImage.onload = init;
+            heartImage.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzMuOHB4IiBoZWlnaHQ9IjQwOC42cHgiIHZpZXdCb3g9IjAgMCA0NzMuOCA0MDguNiI+PHBhdGggZmlsbD0iI2QzMjkzMiIgZD0iTTQwNC42LDE2LjZDMzg1LjQsNi4xLDM2My41LDAsMzQwLDBjLTQxLjUsMC03OC41LDE4LjktMTAzLDQ4LjVDMjEyLjMsMTguOSwxNzUuMywwLDEzMy44LDAgYy0yMy4zLDAtNDUuMyw2LjEtNjQuNSwxNi42QzI3LjksMzkuNSwwLDgzLjQsMCwxMzMuOWMwLDE0LjQsMi40LDI4LjMsNi42LDQxLjJDMjkuNiwyNzguNCwyMzcsNDA4LjYsMjM3LDQwOC42IHMyMDcuMi0xMzAuMiwyMzAuMi0yMzMuNWM0LjMtMTIuOSw2LjYtMjYuOCw2LjYtNDEuMkM0NzMuOCw4My40LDQ0NS45LDM5LjYsNDA0LjYsMTYuNnoiLz48L3N2Zz4=";
+            //heartImage.src = "data/arrow_right.svg";
+
+            window.addEventListener("resize", function () {
+                ww = window.innerWidth;
+                wh = window.innerHeight;
+            })
+        </script>
+        <!-- //#container -->
+
+
+        <!-- popup - 로그인 안내 -->
+        <div class="modal_pop" data-idx="1">
+
+            <div class="modal modal_loginInfo">
+                <div id="modal_header">
+                    <div class="modal_inner">
+
+                        <h3 class="modal_title">아이디/비밀번호찾기 활용안내</h3>
+                        <button type="button" class="close_btn close_modalType1"></button>
+
+                    </div>
+                </div>
+                <div id="modal_contents">
+                    <ol>
+                        <li>
+                            <div class="text_box">
+                                <span>아이디:사번 / 최초 비밀번호: 사번</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text_box">
+                                <p>1. 아이디 찾기</p>
+                                <p class="extra">- 이름, 이메일 입력</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text_box">
+                                <p>2. 비밀번호 찾기</p>
+                                <p class="extra">- 'OTP 전송' 클릭</p>
+                                <p class="extra">- 이름, 아이디, 이메일 입력</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- //popup - 로그인 안내 -->
+
+        <!-- modal - 학습자 유의사항 -->
+        <div class="modal_pop" data-idx="2">
+
+            <div class="modal modal_notice">
+                <div id="modal_header">
+                    <div class="modal_inner">
+
+                        <h3 class="modal_title">학습자 유의사항</h3>
+                        <a href="#" class="infoBtn">관련규정 자세히보기</a>
+                        <button type="button" class="close_btn close_modalType1"></button>
+
+                    </div>
+                </div>
+                <div id="modal_contents">
+                    <div class="modal_inner">
+
+                        <div class="tab_container">
+
+                            <div class="tab tab_page">
+
+                                <ul class="between">
+                                    <li class="on">
+                                        <span>훈련생 유의사항</span>
+                                    </li>
+                                    <li>
+                                        <span>교육 진행절차</span>
+                                    </li>
+                                    <li>
+                                        <span>고용보험 환급안내</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- tab 메뉴 콘텐츠 -->
+                            <div class="tab_sec sec01 on">
+                                <ul>
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon01.png" alt="고용보험 환급과정">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p>고용보험 환급 과정</p>
+                                            <span>환급과정을 수강하기 위해서는 사업장 및 재직자가 <em class="point_blue">고용보험에 가입</em>되어 있어야
+                                                합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon02.png" alt="대리수강 및 허위수강">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p class="chk_x">대리수강 및 허위수강</p>
+                                            <span>명의도용 및 본인 이외의 <em class="point_red">타인이 대리로 수강</em>할 수 없습니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon03.png" alt="고용보험 환급과정">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p class="chk_x">평가문제 모사답안</p>
+                                            <span><em class="point_red">타인의 답안을 제출</em>할 경우 모사답안 처리 기준에 따라 <em
+                                                    class="point_red">감점</em>됩니다.</span>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon04.png" alt="교육과정 미수료">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p class="chk_x">교육과정 미수료</p>
+                                            <span>미수료 시 미수료 처리되어 <em class="point_red">환급이 불가</em>하며, 횟수에 따라 <em
+                                                    class="point_red">패널티가
+                                                    적용</em>됩니다.</span>
+                                        </div>
+
+                                    </li>
+                                    <li>
+
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon05.png" alt="수료기준">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p>수료기준</p>
+                                            <ul class="start">
+                                                <li class="classProcess">
+                                                    <span>학습진도율<em class="point_blue2">80%이상</em></span>
+                                                    <div class="bar_wrap">
+                                                        <div class="bar blue" style="width:80%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="classProcess">
+                                                    <span>시험환산점수<em class="point">총점 60점 이상</em></span>
+                                                    <div class="bar_wrap">
+                                                        <div class="bar mint" style="width:60%;"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="../assets/images/learner_note_icon06.png" alt="1일 학습진도 안내">
+                                        </div>
+
+                                        <div class="text_box">
+                                            <p class="chk_none">1일 학습진도 안내</p>
+                                            <span><em class="point">◆ 재직자 훈련 :</em> 최대 8차시 수강 가능</span>
+                                            <span><em class="point">◆ 사업주 훈련 :</em> 최대 8차시 수강 가능</span>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="tab_sec sec02">
+                                <div class="img_box">
+                                    <img src="../assets/images/sub/learnerInfo_img2.jpg" alt="교육진행 절차">
+                                </div>
+                            </div>
+
+                            <div class="tab_sec sec03">
+                                <div class="img_box">
+                                    <img src="../assets/images/sub/learnerInfo_img3.jpg" alt="고용보험 환급안내">
+                                </div>
+                            </div>
+                            <!-- // tab 메뉴 콘텐츠 -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- // modal - 학습자 유의사항 -->
+
+
+        <!-- #footer -->
+        <div id="footer">
+            <div class="inner">
+                <ul class="footer_info between">
+                    <li>
+                        <div class="address">
+                            <p><strong>학습지원센터 02-2163-5700</strong></p>
+                            <p>email: <a href="mailto:alpha@alpaco.co.kr">alpha@alpaco.co.kr</a></p>
+                            <p>평일: 09:00 ~ 18:00 / 점심: 12:00 ~ 13:00<span>(토, 공휴일 휴무)</span></p>
+                        </div>
+                        <div class="copyright">
+                            COPYRIGHT ⓒ Alpaco. ALL RIGHTS RESERVED.
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#a"><strong>개인정보처리방침</strong></a>
+                        <a href="#a">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- // #footer -->
+
+    </div>
+    <!-- //#wrap -->
+</body>
+
+</html>

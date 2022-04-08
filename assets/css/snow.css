@@ -1,0 +1,26 @@
+.snow {
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    animation: snowfall 5s linear infinite;
+    filter: blur(1px);
+}
+.login_contants {
+    position: relative;
+    z-index: 90;
+}
+
+@keyframes snowfall {
+    from {
+        top: -10px;
+    }
+
+    to {
+        top: 99%;
+        opacity: 0;
+    }
+}

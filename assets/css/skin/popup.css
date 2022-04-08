@@ -1,0 +1,854 @@
+@charset "utf-8";
+/* ===================================
+ * modal
+ =================================== */
+/* 학습자 유의사항 */
+.modal_notice {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto; 
+  background-color: #fff;
+  overflow: hidden;
+}
+.modal_notice #modal_header .infoBtn {
+  position: absolute;
+  top: 50%;
+  right: 70px;
+
+  transform: translateY(-52%);
+  padding: 3px 5px;
+  border: 1px solid #fff;
+  font-size: 12px;
+  letter-spacing: -0.54px;
+}
+.modal_notice #modal_contents .tab_page {
+  border-bottom: none;
+}
+.modal_notice #modal_contents .tab_sec {
+  height: 616px;
+  margin-bottom: 25px;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li:last-child {
+  margin-bottom: 30px;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .img_box {
+  width: 20%;
+  margin: 32px 0;
+  text-align: center;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box {
+  width: 80%;
+  text-align: left;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p::before {
+  display: inline-block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url(../../images/icon_chk3.png) no-repeat 0 0;
+  vertical-align: middle;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p.chk_x::before {
+  background: url(../../images/icon_chk3.png) no-repeat -24px 0;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p.chk_none::before {
+  display: none;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box span + span {
+  margin-left: 20px;
+}
+
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box span em {
+  font-weight: 500;
+}
+
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul {
+  width: 100%;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li {
+  width: 50%;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li.classProcess span {
+  width: 80%;
+  overflow: hidden;
+  font-size: 14px;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li.classProcess span > em {
+  float: right;
+  font-weight: 500;
+}
+.modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li.classProcess .bar_wrap {
+  margin: 0;
+}
+.modal_notice #modal_contents .tab_sec.sec02 .img_box,
+.modal_notice #modal_contents .tab_sec.sec03 .img_box {
+  padding: 56px 0;
+}
+.modal_notice #modal_contents .tab_sec.sec02 .img_box img,
+.modal_notice #modal_contents .tab_sec.sec03 .img_box img  {
+  width: 100%;
+}
+
+
+/* main A & B (로그인안내) */
+.modal_loginInfo {
+  width: 340px;
+  background-color: #fff;
+}
+.modal_loginInfo #modal_contents {
+  padding: 0 26px 26px 26px;
+}
+.modal_loginInfo #modal_contents ol li .text_box {
+  margin-bottom: 14px;
+}
+.modal_loginInfo #modal_contents ol li .text_box > span {
+  font-weight: 600;
+  color: #333;
+}
+.modal_loginInfo #modal_contents ol li .text_box > p.extra {
+  margin-left: 16px;
+}
+
+
+
+/* ===================================
+ * pop
+ =================================== */
+/* 과제 제출하기 */
+.asgSubmit {
+  text-align: center;
+}
+.asgSubmit .pop_sec {
+  padding: 16px 0 0;
+  border: 1px solid #d5d5d5;
+}
+.asgSubmit .pop_sec .img_box {
+  margin-bottom: 25px;
+}
+.asgSubmit .pop_sec .btnArea {
+  margin: 29px 0;
+}
+.asgSubmit .pop_sec .btnArea input[type="text"] {
+  width: 226px;
+  vertical-align: middle;
+} 
+.asgSubmit .pop_sec .btnArea button {
+  width: 122px;
+  margin-left: 2px;
+}
+.asgSubmit .pop_sec div.text_box {
+  padding: 24px 65px;
+  background-color: #0077db;
+  line-height: 28px;
+  color: #fff;
+}
+
+.asgSubmit .extra {
+  margin: 12px 0 23px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: right;
+}
+.asgSubmit .btnArea button {
+  width: 170px;
+  font-size: 16px;
+}
+
+/* 관련규정 */
+.regulation .pop_sec {
+  padding-bottom: 32px;
+}
+.regulation .pop_sec h3 {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #333;
+}
+.regulation .pop_sec .text_box {
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+.regulation .pop_sec .text_box + .text_box > ol > li{
+  margin: 0 0 38px 15px;
+  list-style-type: decimal;
+}
+
+
+/* 배송지 목록 */
+.dlvyList .pop_sec {
+  margin-bottom: 29px;
+}
+.dlvyList .pop_sec .text_box {
+  border: 1px solid #d5d5d5;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+}
+.dlvyList .pop_sec .text_box .userName {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.dlvyList .pop_sec .btnArea button {
+  width: 100%;
+}
+/* 배송지 수정 */
+.dlvyMod .pop_sec .inputArea input {
+  margin-bottom: 14px;
+}
+.dlvyMod .pop_sec .inputArea input + input + input {
+  margin-bottom: 10px;
+}
+.dlvyMod .pop_sec .inputArea label {
+  font-size: 14px;
+  vertical-align: top;
+}
+.dlvyMod .pop_sec .inputArea label input {
+  margin-top: 2px;
+}
+.dlvyMod .pop_sec .inputArea {
+  margin-bottom: 20px;
+}
+.dlvyMod .pop_sec .btnArea button {
+  width: 100%;
+}
+
+/* 도서정보 */
+.bookInfo .tab {
+  margin-bottom: 14px;
+}
+.bookInfo .tab ul li {
+  width: calc(100% / 3);
+}
+.bookInfo .between {
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.bookInfo .tab_sec .tab_sec-top .img_box span {
+  width: 198px;
+  display: inline-block;
+  border: 1px solid #d5d5d5;
+  margin: 0 14px 12px 0;
+  background-color: var(--gray-bg-color);
+}
+.bookInfo .tab_sec .tab_sec-top .img_box span img {
+  width: 100%;
+}
+.bookInfo .tab_sec .tab_sec-top .img_box .detailBtn {
+  display: block;
+  width: 198px;
+  height: 38px;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+  line-height: 38px;
+} 
+.bookInfo .tab_sec .tab_sec-top .rowTb tbody tr {
+  height: 42px;
+}
+.bookInfo .tab_sec .tab_sec-top .rowTb tbody tr th {
+  background-color: var(--gray-bg-color);
+}
+.bookInfo .tab_sec .tab_sec-top .rowTb tbody tr td {
+  padding-left: 16px;
+}
+
+.bookInfo .tab_sec .tab_sec-bottom {
+  border: 1px solid #d5d5d5;
+  padding: 18px 12px;
+  margin-bottom: 30px;
+}
+.bookInfo .tab_sec .tab_sec-bottom li {
+  margin-bottom: 40px;
+} 
+
+.bookInfo .btnArea button {
+  width: 170px;
+}
+
+
+
+/*  최종평가 응시 주의사항 안내 */
+.evalFinal_info .pop_sec .text_box {
+  border: 1px solid #d5d5d5;
+  margin-bottom: 30px;
+}
+.evalFinal_info .pop_sec .text_box ol {
+  padding: 35px 30px;
+  counter-reset: section;
+}
+.evalFinal_info .pop_sec .text_box ol li::before {
+  counter-increment: section;
+  content: counter(section) ")";
+  margin-right: 5px;
+}
+.evalFinal_info .pop_sec .text_box ol li {
+  margin-bottom: 26px;
+}
+.evalFinal_info .pop_sec .text_box ol li .point_red {
+  font-weight: 500;
+}
+.evalFinal_info .pop_sec .text_box ol li p {
+  margin-left: 23px;
+}
+.evalFinal_info .pop_sec .btnArea label input[type="checkbox"] {
+  margin-top: 3px;
+}
+.evalFinal_info .pop_sec .btnArea button {
+  width: 121px;
+  margin-left: 26px;
+}
+
+
+
+
+/* 교수학습활동 */
+.lrnWay .tab {
+  margin-bottom: 40px;
+}
+.lrnWay .tab ul li {
+  width: calc(100% / 4);
+}
+.lrnWay .tab_sec .tab_sec-top {
+  margin-bottom: 40px;
+}
+.lrnWay .tab_sec .tab_sec-top h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+.lrnWay .tab_sec .tab_sec-top .box span em {
+  color: #f2444a;
+}
+.lrnWay .tab_sec .tab_sec-top .box span:first-child + span {
+  padding: 0 8px;
+	font-weight: 400;
+}
+.lrnWay .tab_sec .tab_sec-top .box .period a {
+  margin-left: 10px;
+}
+
+/* 교수학습활동 - 학습방법 */
+.lrnWay .tab_sec.sec01 .tab_sec-bottom h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process {
+	padding-left: 10px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process > p.info {
+	padding-top: 20px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li {
+	display: table;
+	width: 100%;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li .img_box {
+	display: table-cell;
+	width: 130px;
+	text-align: center;
+	vertical-align: bottom;	
+  font-size: 13px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step1 .img_box {
+	height: 78px;
+	background: url('../../images/bg_process_step_01.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step2 .img_box {
+	height: 61px;
+	background: url('../../images/bg_process_step_02.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step3 .img_box {
+	height: 61px;
+	background: url('../../images/bg_process_step_03.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step4 .img_box {
+	height: 61px;
+	background: url('../../images/bg_process_step_04.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step5 .img_box {
+	height: 61px;
+	background: url('../../images/bg_process_step_05.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step6 .img_box {
+	height: 61px;
+	background: url('../../images/bg_process_step_06.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step7 .img_box {
+	height: 76px;
+	background: url('../../images/bg_process_step_07.png') no-repeat;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li .img_box span {
+	display: block;
+	padding: 0 10px 0 10px;
+	color: #ffffff;
+	font-weight: 700;
+	line-height: 18px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step1 .img_box span,
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step2 .img_box span,
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step3 .img_box span {
+	padding: 0 10px 10px 10px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step7 .img_box span {
+	padding: 0 10px 25px 10px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li .text_box {
+	display: table-cell;
+	width: auto;
+	height: 45px;
+	padding-left: 30px;
+	vertical-align: bottom;		
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li .text_box span {
+	display: table-cell;
+	padding-left: 15px;
+	padding-bottom: 10px;
+	letter-spacing: -0.5px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step1 .text_box span {
+	background: url('../../images/bullet_01.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step2 .text_box span {
+	background: url('../../images/bullet_02.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step3 .text_box span {
+	background: url('../../images/bullet_03.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step4 .text_box span {
+	background: url('../../images/bullet_04.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step5 .text_box span {
+	background: url('../../images/bullet_05.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step6 .text_box span {
+	background: url('../../images/bullet_06.png') no-repeat 0px 7px;
+}
+.lrnWay .tab_sec.sec01 .tab_sec-bottom .process li.step7 .text_box span {
+	padding-bottom: 25px;
+	background: url('../../images/bullet_07.png') no-repeat 0px 7px;
+}
+
+/* 교수학습활동 - 과정개요 */
+.lrnWay .tab_sec .tab_sec-bottom .boxGray {
+  margin-bottom: 30px;
+	padding: 20px 20px 20px 20px;
+  background: #f5f5f5;	
+}
+.lrnWay .tab_sec .tab_sec-bottom .box h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .box h4 + p {
+  margin-bottom: 20px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .box h5 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .box {
+  margin-bottom: 50px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .box .info {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.lrnWay .tab_sec .tab_sec-bottom table.colTb thead tr th {
+  height: 43px;
+  padding: 5px 0;
+}
+.lrnWay .tab_sec .tab_sec-bottom table.colTb tbody tr td {
+  padding: 5px 10px;
+  border-right: 1px solid #d5d5d5;
+}
+.lrnWay .tab_sec .tab_sec-bottom table.colTb tbody tr td:last-child {
+  border-right: none;
+}
+.lrnWay .tab_sec .tab_sec-bottom .btnArea {
+  text-align: right;
+}
+.lrnWay .tab_sec .tab_sec-bottom .btnArea button {
+  width: 84px;
+  margin-top: 20px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .editBox {
+  padding: 10px;
+}
+.lrnWay .tab_sec .tab_sec-bottom .editBox textarea {
+  width: 100%;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book { 
+  margin-bottom: 50px;
+}	
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li {
+	display: table;
+	width: 100%;
+	margin-top: 20px; 
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li:first-child { 
+	margin-top: 0;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li > div { 
+	display: table-cell;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li > .month {
+	width: 125px;
+	font-size: 1.38em;
+	text-align: center;
+	vertical-align: middle;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li > .month strong {
+	padding-right: 5px;
+	font-size: 2em;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li > .month + div {
+	position: relative;
+	display: table;
+	width: 100%;
+	min-height: 176px;
+	padding: 20px 25px 20px 25px;
+	border: solid 1px #d9dddf;
+	background: #f9f9f9;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .arrow {
+	display: block;
+	position: absolute;
+	top: 77px;
+	left: -15px;
+	width: 15px;
+	height: 30px;	
+	background: url('/images/classroom/template1/gray/bg_book_arrow_01.png') no-repeat;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .imgBox {
+	display: table-cell;
+	width: 94px;
+	height: 136px;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .imgBox img {
+	width: 92px;
+	height: 134px;
+	border: solid 1px #d9dddf;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .textBox {
+	display: table-cell;
+	padding-left: 25px;
+	vertical-align: top;	
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .textBox p {
+	margin-bottom: 5px;
+	padding: 5px 0 10px 0;
+	border-bottom: solid 1px #acb2b5;
+	font-size: 15px;
+	font-weight: 700;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .textBox dl {
+	display: block;
+	line-height: 25px;
+	color: #494f54;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .textBox dt {
+	float: left;
+	font-weight: 700;
+}
+.lrnWay .tab_sec.sec02 .tab_sec-bottom .book ul li .month + div .textBox dd {
+	margin-left: 60px;
+}
+
+.lrnWay .tab_sec.sec03 .tab_sec-bottom .box01 table.rowTb th {
+  background-color: var(--gray-bg-color);
+  border-right: 1px solid #d5d5d5;
+}
+
+.lrnWay .tab_sec.sec03 .tab_sec-bottom .box02 table.colTb:first-of-type {
+  margin-bottom: 50px;
+}
+
+/* 학습 수행 활동 */
+.weekPerform {
+  display: block;
+  margin: 5px 0 30px 0;
+}
+.weekPerform .alignRight {
+margin-bottom: 10px;
+}
+.weekPerform .all {
+float: left;
+display: inline-block;
+width: 52px;
+height: 54px;
+margin: 0px 5px 0px 0px;
+border: solid 1px #c0c0c0;
+}
+.weekPerform .box {
+  overflow: hidden;
+  position: relative;
+  height: 54px;
+}
+.weekPerform ul {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 2000px;
+  height: 40px;
+z-index: 20;
+}
+.weekPerform li {
+float: left;
+display: inline-block;
+width: 54px;
+height: 54px;
+margin: 0px 0px 0px 5px;
+border: solid 1px #c0c0c0;	
+}
+.weekPerform li:first-child {
+margin: 0px;
+}
+.weekPerform li a,
+.weekPerform .all a {
+display: block;		
+width: 100%;
+height: 100%;
+line-height: 52px;
+text-align: center;
+background: #ebeced;
+}
+.weekPerform li a:hover,
+.weekPerform .all a:hover {
+color: #ffffff;
+background: #7f868b;
+}
+.weekPerform li.active, .weekPerform li:hover, .weekPerform .all:hover {
+border: solid 1px #7f868b;
+}
+.weekPerform li.active a {
+font-weight: 700;
+color: #ffffff;	
+background: #7f868b;
+}
+.weekPerform .btnPrev, .weekPerform .btnNext {
+display: inline-block;
+width: 30px;
+height: 32px;
+font-size: 0;
+border: solid #e3e3e3;
+border-width: 1px 1px 1px 1px;	
+}
+.weekPerform .btnPrev {
+margin-right: 3px;
+background: #ffffff url('/images/classroom/template1/button/btn_tab_prev.png') 9px 7px no-repeat;
+}
+.weekPerform .btnNext {
+background: #ffffff url('/images/classroom/template1/button/btn_tab_next.png') 10px 7px no-repeat;
+}
+.weekPerform .btnPrev:hover {
+border: solid 1px #c0c0c0;
+background: #f9f9f9 url('/images/classroom/template1/button/btn_tab_prev.png') 9px 7px no-repeat;
+}
+.weekPerform .btnNext:hover {
+border: solid 1px #c0c0c0;
+background: #f9f9f9 url('/images/classroom/template1/button/btn_tab_next.png') 10px 7px no-repeat;
+}
+.weekPerform .content {
+clear: both;
+position: relative;
+top: -1px;
+margin: 0px 0 0 0px;
+padding: 20px 20px 20px 20px;
+color: #ffffff;
+background: #7f868b;
+z-index: 50;
+}
+.weekPerform .content dt {
+  display: block;
+  float: left;
+  font-weight: 700;
+  line-height: 18px;
+}
+.weekPerform .content dd {
+margin-bottom: 5px;
+margin-left: 65px;
+padding-left: 15px;
+}
+.weekPerform .content dd:before {
+content: ':';
+padding-right: 15px;
+margin-left: -18px;
+
+}
+
+.lrnWay .tab_sec.sec04 .tab_sec-bottom h5 {
+  margin-bottom: 12px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab {
+	display: block;
+	position: relative;
+	height: 41px;
+	margin-bottom: 30px;
+	border-bottom: solid 1px #7f868b;
+	border-left: 1px solid #d9dddf;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab ul li {
+	display: block;
+  float: left;
+	width: calc(100% / 5);
+	height: 40px;
+	border-top: 1px solid #d9dddf;
+	border-right: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab li a {
+  display: block;
+  height: 100%;
+  padding: 0 15px;
+  line-height: 40px;
+  font-size: 1.15em;
+	letter-spacing: -1px;
+	color: #61696f;   
+  text-align: center;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab li a:hover {
+	color: #313538;
+	text-decoration: none;
+	background: #f9f9f9;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab li.active {
+	height: 41px;
+	border: solid 1px #7f868b;
+	border-bottom: none;
+	font-weight: 700;
+	background: #ffffff;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab li.active a {
+	color: #313538;	
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab li a span {
+    margin-left: 4px;
+}
+
+
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .rowTb:first-of-type {
+  margin-bottom: 50px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .rowTb tr th {
+  background-color: var(--gray-bg-color);
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .rowTb tr td {
+  padding: 13px 15px 13px 15px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .boxGray p {
+  margin-bottom: 15px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .boxGray p:last-child {
+  margin-bottom: 0;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab_sec-top .imgBox {
+  width: 74px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .tab_sec-top .imgBox + .text_box {
+  font-size: 14px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .radioncheckbox input {
+  margin-top: 3px;
+}
+.lrnWay .tab_sec.sec04 .tab_sec-bottom .radioncheckbox input:first-child + label {
+  margin-right: 20px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  
+}
+@media screen and (max-width: 1024px) {
+  
+}
+@media screen and (max-width: 768px) {
+  .modal_notice {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .modal_notice {
+    height: 552px;
+  }
+  .modal_notice #modal_header .infoBtn {
+    right: 40px;
+  }
+  
+}
+@media screen and (max-width: 414px) {
+  /* 학습자 유의사항 */
+  .modal_notice .tab_page ul li {
+    line-height: 1.35;
+  }
+  .modal_notice .tab_page ul li span {
+    width: 80px;
+  }
+  
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .img_box {
+    width: 25%;
+    vertical-align: middle;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .img_box img {
+    max-width: 38px;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box {
+    width: 75%;
+    padding: 10px 0;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li {
+    width: 100%;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li + li {
+    margin-top: 10px;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box > ul li.classProcess span {
+    font-size: 12px;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p {
+    font-size: 14px;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box p::before {
+    margin: -3px 4px 0 0;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box span {
+    font-size: 12px;
+  }
+  .modal_notice #modal_contents .tab_sec.sec01 > ul > li > .text_box span + span {
+    margin-left: 0;
+    display: block;
+  }
+  .modal_notice #modal_contents .tab_sec {
+    height: 415px;
+  }
+
+  /* 도서정보 */
+  .lrnWay .tab_sec.sec02 .tab_sec-bottom .bookInfo .tab_sec .tab_sec-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lrnWay .tab_sec.sec02 .tab_sec-bottom .bookInfo .tab_sec .tab_sec-top .img_box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .lrnWay .tab_sec.sec02 .tab_sec-bottom .bookInfo .tab_sec .tab_sec-top .img_box span {
+    text-align: center;
+    width: 100%;
+    height: 152px;
+    padding: 10px 0;
+    margin: 0 0 5px 0;
+  }
+  .lrnWay .tab_sec.sec02 .tab_sec-bottom .bookInfo .tab_sec .tab_sec-top .img_box span img {
+    width: 45%;
+  }
+  .lrnWay .tab_sec.sec02 .tab_sec-bottom .bookInfo .tab_sec .tab_sec-top .img_box .detailBtn {
+    width: 100%;
+  }
+}
+

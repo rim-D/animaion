@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100vh;
+            /* 
+                원형의 중심 위치가 어디인지를 나타내는 elipse at bottom 
+                위치, 시작위치의 색상값(원형컬러), 종료위치의 색상값(배경컬러)
+            */
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            overflow: hidden;
+        }
+
+        .snow {
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            background: #fff;
+            border-radius: 50%;
+            /* 애니메이션 10초동안 균일한 속도로 무한반복 */
+            animation: snow 10s linear infinite;
+        }
+
+        .snow:nth-of-type(2n) {
+            width: 7px;
+            height: 7px;
+            animation-duration: 7s;
+            /* 눈이 좀 더 빨리 내리게 설정 */
+            animation-delay: 1s;
+        }
+
+        .snow:nth-of-type(2n+1) {
+            animation-duration: 8s;
+            /* 눈이 좀 더 빨리 내리게 설정 */
+            animation-delay: 2s;
+        }
+
+        .snow:nth-of-type(9n) {
+            animation-duration: 9s;
+            /* 눈이 좀 더 빨리 내리게 설정 */
+            animation-delay: 5s;
+        }
+
+        @keyframes snow {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translate(-15px, 20vh);
+            }
+
+            40% {
+                opacity: 1;
+                transform: translate(15px, 40vh);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate(-15px, 60vh);
+            }
+
+            80% {
+                opacity: 1;
+                transform: translate(0, 80vh);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="snow"></div>
+    <script>
+        function snow() {
+            const el = document.createElement('div');
+            el.classList.add('snow');
+            el.style.marginLeft = randomPoistion() + 'px';
+            document.body.appendChild(el); // .createElement()하여 node생성 후 .appendChild해야함
+        }
+        function randomPoistion() {
+            return Math.floor(Math.random() * window.innerWidth);
+        }
+
+        for (let i = 0; i < 300; i++) {
+            snow();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+            /* 
+                원형의 중심 위치가 어디인지를 나타내는 elipse at bottom 
+                위치, 시작위치의 색상값(원형컬러), 종료위치의 색상값(배경컬러)
+            */
+            background: radial-gradient(ellipse at bottom, #ebebeb 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .snow {
+            position: absolute;
+            top: -10px;
+            display: block;
+            width: 3px;
+            height: 3px;
+            background: #53c0f3;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: snowfall 5s linear infinite;
+        }
+
+        @keyframes snowfall {
+            from {
+                top: -10px;
+            }
+
+            to {
+                top: 99%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="snow"></div>
+    <script>
+        let count = 0;
+
+        function snow() {
+            const el = document.createElement('div');
+            el.classList.add('snow');
+            el.style.left = `${Math.random() * (window.innerWidth - 1) + 1}px`;
+            el.style.animationDuration = `${Math.random() * (20 - 8) + 8}s`;
+            el.style.animationDely = `${Math.random() * (10 - 1) + 1}s`;
+            el.style.opacity = `${Math.random()}`;
+
+            document.body.appendChild(el); // .createElement()하여 node생성 후 .appendChild해야함
+
+            if (count < 900) {
+                window.requestAnimationFrame(snow);
+                count++;
+            }
+        }
+
+        snow();
+
+    </script>
+</body>
+
+</html>

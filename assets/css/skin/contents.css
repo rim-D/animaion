@@ -1,0 +1,3137 @@
+@charset "utf-8";
+/* 회원정보 입력 화면 ( 마이페이지 / 회원가입 / 수강신청하기) */
+.contents .step_mb {
+  display: none;
+}
+.contents .step ol {
+  width: 100%;
+  margin-bottom: 57px;
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.contents .step ol li {
+  display: inline-block;
+  padding: 20px 12px;
+}
+.contents .step ol li:last-child {
+  padding-right: 0;
+}
+.contents .step ol li > em {
+  padding-right: 10px;
+}
+.contents .step ol li > span.img_box {
+  display: inline-block;
+  padding-left: 24px;
+}
+.contents .step ol li > span.on {
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+
+#fill_info table {
+  margin-bottom: 60px;
+}
+#fill_info table tr th {
+  width: 18%;
+  padding: 0 13px;
+  letter-spacing: -0.6px;
+  text-align: left;
+  vertical-align: top;
+}
+#fill_info table tr th .tbl_tit {
+  padding: 19px 0 0;
+}
+#fill_info table tr.tel.orderTel th .tbl_tit {
+  padding: 8px 0 0;
+}
+#fill_info table tr th label em.point_red {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+#fill_info table tr td {
+  width: 100%;
+  padding: 12px 0;
+}
+#fill_info table tr td input,
+#fill_info table tr.userId td .input_box,
+#fill_info table tr.corporationName .select_box {
+  width: 287px;
+}
+#fill_info table tr td .input_box,
+#fill_info table tr.orderMsg td input {
+  width: 75%;
+}
+#fill_info table tr.userId td .input_box {
+  display: inline-block;
+}
+#fill_info table tr.userId td .input_box input {
+  width: calc(100% - 70px);
+}
+#fill_info table tr.userId td .input_box button[type="button"] {
+  width: 67px;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+#fill_info table tr td .tbl_val {
+  height: 36px;
+  line-height: 36px;
+}
+#fill_info table tr.birth td .input_box .select_box {
+  display: inline-block;
+  width: calc(287px / 3 - 3px);
+}
+/* #fill_info table tr td .input_box .select_box select,
+#fill_info table tr td .select_box select {
+  width: 100%;
+} */
+#fill_info table tr.gender td label {
+  width: 56px;
+  height: 36px;
+  line-height: 36px;
+}
+#fill_info table tr.gender td label input {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+#fill_info table tr.tel td .input_box input {
+  width: calc(100% / 3 - 8px);
+}
+
+#fill_info table tr.email td .input_box input,
+#fill_info table tr.email td .input_box .select_box {
+  width: calc((100% - 24px) / 3);
+}
+#fill_info table tr.email td .input_box .select_box {
+  float: right;
+}
+
+#fill_info table tr.address td .input_box input {
+  width: calc(100% - 83px - 5px);
+}
+#fill_info table tr.address td .input_box button {
+  width: 83px;
+  margin-left: 5px;
+  vertical-align: top;
+}
+#fill_info table tr.address td .input_box input, 
+#fill_info table tr.address td > input {
+  margin-bottom: 12px;
+}
+#fill_info table tr.address td > .address_detail {
+  padding: 12px 0;
+  border-top: 1px solid #d5d5d5;
+}
+#fill_info table tr.address td > .address_detail input {
+  width: 75%;
+  margin-bottom: 8px;
+}
+#fill_info table tr.address td > .address_detail span {
+  display: block;
+  color: #9f9f9f;
+}
+
+
+#fill_info table tbody.payArea tr th {
+  background-color: var(--gray-bg-color);
+}
+#fill_info table tbody.payArea tr td {
+  padding-left: 2%;
+}
+
+
+
+
+
+/* 공지사항, 1:1문의 */
+.board_st {
+  padding: 0 58px;
+  overflow: hidden;
+}
+.board_st > p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.board_st > p > span {
+  float: right;
+  padding: 5px 15px;
+  border: 1px solid #d5d5d5;
+  font-size: 12px;
+  border-radius: 15px;
+}
+.board_st > ul > li {
+  padding: 13px 0;
+  border-bottom: 1px solid #d5d5d5;
+  vertical-align: middle;
+}
+.board_st > ul > li > a {
+  display: inline-block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board_st > ul > li > a:hover {
+  text-decoration: underline;
+}
+.board_st > ul > li > span {
+  float: right;
+}
+
+
+
+
+
+/* *
+ * 학습지원센터 - 공지사항 / 1:1문의
+ * 학습지원센터 - 공지사항(보기) / 1:1문의(보기)
+ */
+.bbs_wrap .btnArea,
+.bbsView_wrap .btnArea {
+  margin: 30px 0 24px 0;
+}
+.bbs_wrap .btnArea > a,
+.bbsView_wrap .btnArea > a {
+  width: 82px;
+}
+.bbsView_wrap .btnArea > a {
+  margin-left: 5px;
+}
+
+
+/* *
+ * 학습지원센터 - 공지사항
+ * 학습지원센터 - 1:1문의 
+ */
+.bbs_wrap .rowTb {
+  display: none;
+}
+.bbs_wrap .colTb {
+  margin-top: 10px;
+}
+.bbs_wrap .colTb thead tr th {
+  height: 43px;
+}
+.bbs_wrap .colTb tbody tr:hover {
+  background-color: #eaf8fb;
+}
+.bbs_wrap .colTb tbody tr td {
+  height: 50px;
+}
+
+
+/* *
+ * 학습지원센터 - 공지사항 (보기) 
+ * 학습지원센터 - 1:1문의 (보기)
+ */
+.bbsView_wrap h2 {
+  margin-bottom: 16px;
+  font-size: 1.333rem;
+  color: #333;
+}
+.bbsView_wrap table tbody tr {
+  height: 43px;
+}
+.bbsView_wrap table tbody tr th {
+  background-color: #f9f9f9;
+}
+.bbsView_wrap table tbody tr td {
+  padding: 0 24px;
+}
+.bbsView_wrap table tbody tr td.content {
+  max-width: 768px;
+  height: 200px;
+  padding: 16px;
+  vertical-align: top;
+}
+.bbsView_wrap table tbody tr td a.file_down {
+  border-bottom: 1px solid #666;
+}
+.bbsView_wrap table tbody tr td a.file_down:hover {
+  font-weight: 700;
+}
+
+
+/* *
+ * 학습지원센터 - 공지사항문의하기 (작성)
+ * 학습지원센터 - 1:1문의하기 (작성) 
+ */
+.bbsReg_wrap table tbody tr th {
+  text-align: left;
+}
+.bbsReg_wrap table tbody tr th > em {
+  margin-left: 2px;
+  vertical-align: middle;
+}
+.bbsReg_wrap table tbody tr td {
+  height: 60px;
+}
+.bbsReg_wrap table tbody tr td div.edit_box {
+  padding: 32px 0;
+}
+.bbsReg_wrap table tbody tr td input[name='p_title'],
+.bbsReg_wrap table tbody tr td .select_box.class_name,
+.bbsReg_wrap table tbody tr td div.edit_box > textarea,
+.bbsReg_wrap table tbody tr td div.file_attach {
+  width: calc(100% - 20%);
+}
+.bbsReg_wrap table tbody tr td div.edit_box > textarea {
+  height: 184px;
+}
+.bbsReg_wrap table tbody tr td .select_box {
+  width: calc(100% - 60%);
+}
+.bbsReg_wrap table tbody tr td .select_box select#p_crs_id,
+.bbsReg_wrap table tbody tr td .select_box select {
+  display: inline-block;
+  /* width: 100%; */
+}
+.bbsReg_wrap .btnArea {
+  text-align: center;
+}
+.bbsReg_wrap .btnArea button {
+  width: 169px;
+  margin: 58px 3px 0;
+}
+
+
+
+
+
+/* 학습지원센터 - 소프트웨어 다운로드 */
+.softDown {
+  font-size: 14px;
+}
+.softDown .download_sec01 {
+  padding-bottom: 1.333rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+.softDown .download_sec02 {
+  padding-top: 2.667rem;
+}
+
+.softDown .download_sec01 h4,
+.softDown .download_sec02 h4 {
+  padding: 0 18px;
+  font-size: 16px;
+}
+.softDown .download_sec01 h4 img,
+.softDown .download_sec02 h4 img {
+  margin-right: 14px;
+}
+.softDown .downloadList {
+  width: 62.3%;
+  background-color: #f6f6f6;
+}
+.softDown .downloadList li {
+  position: relative;
+  height: 60px;
+  padding: 0 20px;
+  border: 1px solid #d5d5d5;
+  line-height: 60px;
+}
+.softDown .downloadList li p {
+  display: inline-block;
+  margin-left: 32px;
+}
+.softDown .downloadList li a {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+
+
+
+/* 학습지원센터 - 원격지원문의 */
+.remote .info {
+  background-color: #eaf8fb;
+}
+.remote .info .text_box {
+  width: 100%;
+  height: 215px;
+  padding: 35px 50px;
+  background-color: var(--main-color);
+  color: #fff;
+}
+.remote .info > .text_box > h4 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.remote .step {
+  margin: 72px 0 45px 0;
+}
+.remote .step li {
+  position: relative;
+  width: calc((100% / 3) - 30px);
+  text-align: center;
+}
+.remote .step li > span {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+.remote .step li > p {
+  padding: 10px 20px;
+  border: 1px solid #d5d5d5;
+}
+.remote .step li > p > em {
+  font-weight: 400;
+  color: var(--main-color);
+}
+.remote .step li > span {
+  display: inline-flex;
+}
+.remote p.extra {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d5d5d5;
+  text-align: center;
+}
+
+
+
+
+/* 학습지원센터 - FAQ */
+.uFFDone .tab.tab_page,
+.uFAQ .tab.tab_page {
+  margin-bottom: 30px;
+}
+.uFAQ .tab.tab_page > ul > li {
+  width: 111px;
+}
+.uFAQ .tab_category {
+  display: none;
+}
+.uFAQ .tab_category.on {
+  display: block;
+}
+.uFAQ .tab_category li {
+  display: inline-block;
+  margin: 0 8px 8px;
+  border-bottom: 1px solid #d5d5d5;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.uFAQ .tab_category li:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+.uFAQ .tab_sec {
+  margin-top: 59px;
+}
+.uFAQ .tab_sec p.text_box {
+  text-align: center;
+}
+.uFAQ .tab_sec ul {
+  min-height: 428px;
+  border-top: 2px solid var(--main-color);
+  
+}
+.uFAQ .tab_sec ul li .tab_title,
+.uFAQ .tab_sec ul li .tab_content {
+  position: relative;
+  border-bottom: 1px solid #d5d5d5;
+  letter-spacing: -0.3px;
+}
+.uFAQ .tab_sec ul li .tab_title > span,
+.uFAQ .tab_sec ul li .tab_content > span {
+  width: 100px;
+  padding: 0 14px;
+  font-weight: 500;
+  color: var(--main-color);
+
+  text-align: center;
+}
+.uFAQ .tab_sec ul li .tab_title > p,
+.uFAQ .tab_sec ul li .tab_content > p {
+  width: calc(100% - 111px);
+  padding: 0 15px;
+}
+.uFAQ .tab_sec ul li .tab_title {
+  padding: 9px 0;
+}
+.uFAQ .tab_sec ul li .tab_title span,
+.uFAQ .tab_sec ul li .tab_title p {
+  display: inline-block;
+}
+.uFAQ .tab_sec ul li .tab_title p.tab_title_none {
+  width: 100%;
+  text-align: center;
+}
+.uFAQ .tab_sec ul li .tab_title > p > span > img {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.uFAQ .tab_sec ul li .tab_title > p {
+  cursor: pointer;
+}
+.uFAQ .tab_sec ul li .tab_content {
+  display: none;
+  padding: 25px 0;
+  background-color: var(--gray-bg-color);
+}
+.uFAQ .tab_sec ul li .tab_content span,
+.uFAQ .tab_sec ul li .tab_content p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.uFAQ .tab_sec ul li .tab_content p {
+  font-weight: 200;
+  line-height: 1.8;
+}
+.uFAQ .tab_sec ul li .tab_content > span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+
+/* *
+ * 부가서비스 - 전자도서관 / e_book
+ * 부가서비스 - 지식창고 / kl_store
+ */
+ .e_book .text_box,
+ .kl_store .text_box {
+   width: 100%;
+   padding: 0 0 0 39px;
+ }
+ .e_book .text_box a,
+ .kl_store .text_box a {
+   width: 209px;
+   margin-top: 55px;
+ }
+ .e_book .text_box p,
+ .kl_store .text_box p,
+ .diagnosis .text_box_cnt {
+   line-height: 26px;
+ }
+ 
+ 
+ 
+ 
+ /* 부가서비스 - 진단센터 */
+ .diagnosis .img_box img {
+   width: 100%;
+ }
+ .diagnosis .text_box_cnt {
+   width: 100%;
+   padding: 52px 0;
+   text-align: center;
+ }
+ .diagnosis .process {
+   max-width: 833px;
+   margin: 0 auto;
+   text-align: center;
+ }
+ .diagnosis .process dl {
+   width: calc((100% / 3) - 30px);
+ }
+ .diagnosis .process dl dt {
+   position: relative;
+   height: 43px;
+   background-color: var(--main-color);
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 43px;
+   color: #fff;
+ }
+ .diagnosis .process dl dt img {
+   position: absolute;
+   top: 50%;
+   right: 14px;
+   transform: translateY(-50%);
+ }
+ .diagnosis .process dl dd {
+   padding: 20px;
+   background-color: #f7f7f7;
+ }
+ .diagnosis .process dl dd a {
+   display: block;  
+   width: 120px;
+   margin: 12px auto 0;
+   font-size: 14px;
+ }
+
+
+
+
+/* *
+ * 교육과정     - 수강신청하기 완료 / classRegDone
+ * 회원가입     - 회원가입완료 / uJoinDone
+ * 마이페이지   - 개인정보수정 완료 / modifyProfileDone
+ * 마이페이지   - 개인정보수정 인증 / modifyProfileConfirm
+*/
+.classRegDone .text_box,
+.uJoinDone .text_box,
+.modifyProfileDone .text_box,
+.modifyProfileConfirm .text_box {
+  font-size: 18px;
+  text-align: center;
+}
+.classRegDone .text_box {
+  margin-bottom: 98px;
+}
+.classRegDone .text_box img,
+.uJoinDone .text_box img,
+.modifyProfileDone .text_box img,
+.modifyProfileConfirm .text_box img {
+  margin-bottom: 40px;
+}
+.classRegDone table thead tr th {
+  height: 61px;
+}
+.classRegDone table thead tr th,
+.classRegDone table tbody tr td {
+  border-right: 1px solid #d5d5d5;
+}
+.classRegDone table tbody tr td {
+  padding: 1.667rem 1.133rem;
+}
+.classRegDone table thead tr th:last-child,
+.classRegDone table tbody tr td:last-child {
+  border-right: none;
+}
+.classRegDone .tableArea .head li:first-child,
+.classRegDone .tableArea .body li:first-child {
+  width: 45%;
+}
+.classRegDone .tableArea .head li:nth-child(2),
+.classRegDone .tableArea .body li:nth-child(2) {
+  width: 20%;
+}
+.classRegDone .tableArea .head li:nth-child(3),
+.classRegDone .tableArea .body li:nth-child(3) {
+  width: 20%;
+}
+.classRegDone .tableArea .head li:last-child,
+.classRegDone .tableArea .body li:last-child {
+  width: 15%;
+}
+
+.classRegDone .tableArea .body li {
+  height: 53px;
+  padding: 0 5px;
+}
+
+
+
+.classRegDone p.info {
+  margin-top: 12px;
+}
+.remote .btnArea,
+.classRegDone .btnArea,
+.uJoinDone .btnArea,
+.modifyProfileDone .btnArea,
+.modifyProfileConfirm .btnArea,
+.uFindForm .btnArea,
+.uPwdCgForm .btnArea,
+.uFFDone .btnArea {
+  text-align: center;
+}
+.remote .btnArea > button,
+
+.classRegDone .btnArea > a,
+.uJoinDone .btnArea > a,
+.modifyProfileDone .btnArea > a,
+.uFindForm .btnArea > button,
+.uPwdCgForm .btnArea > button,
+.uFFDone .btnArea > button,
+.uFFDone .btnArea > a {
+  width: 225px;
+  margin: 47px auto 0;
+}
+
+
+
+/* 마이페이지 - 개인정보수정 (인증) */
+.modifyProfileConfirm .text_box {
+  margin-bottom: 30px;
+}
+.modifyProfileConfirm .btnArea {
+  width: 351px;
+  margin: 0 auto 77px;
+}
+.modifyProfileConfirm .btnArea > input[type='password'] {
+  margin-bottom: 8px;
+}
+.modifyProfileConfirm .btnArea > a {
+  display: inline-block;
+  width: 100%;
+  height: 37px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 37px;
+}
+
+
+
+/*  마이페이지 - 개인정보 수정 (완료) */
+.modifyProfileDone {
+  min-height: 357px;
+}
+.modifyProfileDone .text_box {
+  padding-top: 50px;
+}
+
+
+
+/* 회원가입 - 로그인 */
+.login .login_form_wrap {
+  margin: 0 -20px;
+  align-items: flex-start;
+}
+.login .loginArea_l {
+  padding-bottom: 60px;
+}
+.login .loginArea_l,
+.login .loginArea_r {
+  width: 50%;
+  margin: 0 20px 80px;
+}
+.login .loginArea_l > li > input[type='text'],
+.login .loginArea_l > li > input[type='password'] {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.login .loginArea_l > li > input[type='text'] {
+  margin-bottom: 34px;
+}
+.login .loginArea_l > li > input[type='password'] {
+  margin-bottom: 10px;
+}
+.login .loginArea_l .loginChk {
+  font-weight: 400;
+  color: #333;
+}
+.login .loginArea_l .loginChk input[type="checkbox"] {
+  margin-top: 2px;
+}
+.login .loginArea_l > li .loginBtn {
+  width: 100%;
+  height: 54px;
+  margin: 21px 0 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 54px;
+}
+.login .loginArea_r {
+  flex-direction: column;
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+}
+.login .loginArea_r li {
+  position: relative;
+  width: 100%;
+  padding: 18px 42px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.login .loginArea_r li > .text_box {
+  display: inline-block;
+  padding-right: 30px;
+}
+.login .loginArea_r li > .text_box p {
+  font-weight: 400;
+  color: var(--main-color);
+}
+.login .loginArea_r li > .text_box {
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  transform: translateY(-50%);
+}
+.login .loginArea_r li .text_box a:hover {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+
+
+/* 회원가입 - 아이디&비밀번호찾기 */
+.uFindForm .tab.tab_page {
+  margin-bottom: 60px;
+}
+.uFindForm label {
+  font-weight: 400;
+}
+.uFindForm .tab_sec {
+  display: none;
+}
+.uFindForm .tab_sec.on {
+  display: block;
+}
+.uFindForm .tab_sec div.radio_box {
+  padding-left: 26px;
+  margin-bottom: 20px;
+}
+.uFindForm .tab_sec div.radio_box p {
+  margin: 5px 0 0 20px;
+  color: #b4b4b4;
+}
+.uFindForm .tab_sec div.radio_box:last-child {
+  padding: 20px 0 20px 26px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #d5d5d5;
+}
+.uFindForm .tab_sec div.findTel_wrap > p,
+.uFindForm .tab_sec div.findEmail_wrap > p {
+  margin: 10px 0 10px 20px;
+}
+.uFindForm .tab_sec .findTel_contents > li {
+  padding: 0 0 26px;
+}
+.uFindForm .tab_sec .findTel_contents > li:last-child {
+  padding-bottom: 0;
+}
+.uFindForm .tab_sec .findTel_contents > li > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.uFindForm .tab_sec .findTel_contents > li > div > label {
+  width: 20%;
+  max-width: 97px;
+  padding-left: 26px;
+}
+.uFindForm .tab_sec .findTel_contents > li > div > input {
+  width: 219px;
+}
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box em {
+  margin: 4px;
+}
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > .select_box, 
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > input {
+  width: calc(60% / 3);
+  vertical-align: top;
+}
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > .select_box > select {
+  width: 100%;
+}
+.uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > button[type='button'] {
+  width: 125px;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+
+.uFindForm .tab_sec .findTel_contents > li.p_otp_key > div.input_box {
+  padding: 15px 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  background-color: var(--gray-bg-color);
+  border-color: #d5d5d5;
+}
+.uFindForm .tab_sec .findTel_contents > li.p_otp_key > .text_box {
+  padding: 15px 0;
+}
+.uFindForm .tab_sec .findTel_contents > li.p_otp_key > .text_box > p {
+  margin-left: 97px;
+}
+.uFindForm .tab_sec .findTel_contents > li.p_otp_key > .text_box > p strong {
+  display: block;
+}
+.uFindForm .tab_sec .btnArea {
+  text-align: center;
+}
+
+
+
+/* 회원가입 - 비밀번호 찾기 재설정 */
+.uPwdCgForm .tab_sec {
+  min-height: 523px;
+}
+.uPwdCgForm .tab_sec02 {
+  font-size: 20px;
+  text-align: center;
+}
+.uPwdCgForm .tab_sec02 > .text_box > p {
+  font-size: 1rem;
+}
+.uPwdCgForm .tab_sec02 > ul > li > p {
+  padding: 30px 0 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+.uPwdCgForm .tab_sec02 > ul > li > p > span {
+  margin-left: 10px;
+  color: var(--main-color);
+}
+.uPwdCgForm .tab_sec02 > ul > li > div {
+  width: 351px;
+  margin: 0 auto;
+}
+.uPwdCgForm .tab_sec02 > ul > li > div > label {
+  width: 130px;
+  text-align: left;
+}
+.uPwdCgForm .tab_sec02 > ul > li > div > input {
+  margin-bottom: 8px;
+}
+.uPwdCgForm .tab_sec02 > ul > li > div > span {
+  display: block;
+  margin: 0 0 0 10px;
+  text-align: left;
+}
+
+
+
+/* 회원가입 - 아이디&비밀번호찾기 (완료) */
+.uFFDone .tab_sec {
+  display: none;
+  text-align: center;
+}
+.uFFDone .tab_sec.on {
+  display: block;
+}
+.uFFDone .tab_sec .text_box {
+  padding: 55px 0 85px;
+  border-bottom: 1px solid #d5d5d5;
+  font-size: 18px;
+}
+.uFFDone .tab_sec .extra {
+  padding-top: 10px;
+}
+.uFFDone .tab_sec .extra > em > a {
+  border-bottom: 1px solid #666;
+}
+.uFFDone .tab_sec .extra > em > a:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+
+
+/* 회원가입 - 약관동의 */
+.uAuthForm .list {
+  margin-bottom: 84px;
+}
+.uAuthForm .self_auth > h4,
+.uAuthForm .list > h4 {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #666;
+  font-size: 18px;
+}
+.uAuthForm .list > .join_list li {
+  cursor: pointer;
+}
+.uAuthForm .list > .join_list li:first-child > .chk_box {
+  padding-left: 8px;
+}
+.uAuthForm .list > .join_list li > .chk_box {
+  position: relative;
+  padding: 15px 26px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.uAuthForm .list > .join_list li > .chk_box label input[type='checkbox'] {
+  margin: 2px 8px 0 0;
+}
+.uAuthForm .list > .join_list li > .chk_box > span {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding-left: 30px;
+}
+.uAuthForm .list .join_list li > .text_box {
+  display: none;
+  max-width: 964px;
+  height: 280px;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+  overflow-y: auto;
+}
+.uAuthForm .self_auth > .self_auth_t {
+  position: relative;
+  text-align: center;
+  align-items: baseline;
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+}
+.uAuthForm .self_auth > .self_auth_t li {
+  width: 50%;
+  padding: 30px 25px;
+}
+.uAuthForm .self_auth > .self_auth_t li:first-child::after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 80%;
+  background-color: #d5d5d5;
+}
+.uAuthForm .self_auth > .self_auth_t li > button {
+  width: 122px;
+  height: 43px;
+  margin-top: 22px;
+  border-radius: 3px;
+}
+.uAuthForm .self_auth > .self_auth_t li > h5 {
+  margin: 35px 0 16px;
+}
+.uAuthForm .self_auth > .self_auth_t li > a {
+  display: block;
+  padding: 10px 0 0 0;
+  font-weight: 400;
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.uAuthForm .self_auth > .self_auth_b {
+  display: none;
+  padding: 3% 5%;
+  margin-top: 22px;
+  border: 1px solid #d5d5d5;
+}
+.uAuthForm .self_auth > .self_auth_b > .text_box {
+  margin-bottom: 26px;
+}
+.uAuthForm .self_auth > .self_auth_b > ul {
+  width: 100%;
+  margin: 0 -20px;
+}
+.uAuthForm .self_auth > .self_auth_b > ul > li {
+  width: calc(100% / 3);
+  text-align: center;
+}
+.uAuthForm .self_auth > .self_auth_b > ul > li > a {
+  color: var(--main-color);
+}
+.uAuthForm .self_auth > .self_auth_b > ul > li > a > .img_box {
+  margin: 0 20px 14px;
+}
+.uAuthForm .self_auth > .self_auth_b > ul > li > a > .img_box > img {
+  width: 100%;
+  border: 1px solid #d5d5d5;
+}
+
+
+
+
+/* *
+ * 회원가입   - 회원정보입력 / uJoin
+ * 마이페이지 - 개인정보수정 등록 / modifyProfile
+ */
+.modifyProfile .btnArea,
+.uJoin .btnArea {
+  margin-top: 60px;
+  text-align: center;
+}
+.modifyProfile .btnArea > button,
+.uJoin .btnArea > button {
+  width: 169px;
+}
+
+
+
+
+/* 교육과정 - 경제경영 */
+.classList .sub_sec01 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.classList .sub_sec01 input[type='search'] {
+  width: 70%;
+}
+.classList .sub_sec02 {
+  padding: 33px 37px;
+  background-color: var(--gray-bg-color);
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.classList .sub_sec02 .chkArea_list label.chk_all_wrap {
+  width: 10%;
+}
+.classList .sub_sec02 .chkArea_list .depth2 {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.classList .sub_sec02 .chkArea_list .depth2 label {
+  width: calc(100% / 5);
+  margin-bottom: 7px;
+  letter-spacing: -0.54px;
+}
+.classList .sub_sec02 .chkArea_list .depth2 > label input[type="checkbox"] {
+  margin-top: 3px;
+  background: url(../../images/icon_chk2.png) no-repeat 0 0;
+}
+.classList .sub_sec02 .chkArea_list .depth2 > label input[type="checkbox"]:checked {
+  background: url(../../images/icon_chk2.png) no-repeat -16px 0;
+}
+.classList .sub_sec02 {
+  margin-bottom: 23px;
+}
+.classList .sub_sec02 .depth3_wrap {
+  flex-direction: column;
+}
+.classList .sub_sec02 .depth3_wrap .depth3 {
+  width: 100%;
+  padding: 10px 0 5px;
+  letter-spacing: -1px;
+  overflow: hidden;
+}
+.classList .sub_sec02 .depth3_wrap .depth3 li {
+  display: inline-flex;
+  float: left;
+  width: calc(100% / 5);
+}
+.classList .sub_sec02 .depth3_wrap .depth3 li label input[type="checkbox"] {
+  margin-top: 3px;
+}
+.classList .sub_sec03 {
+  position: relative;
+}
+.classList .sub_sec03 .select_box {
+  float: right;
+  width: 164px;
+  height: 36px;
+  margin-bottom: 10px;
+}
+.classList .sub_sec03 .count {
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+/* .classList .sub_sec03 .select_box select {
+  width: 100%;
+} */
+.classList .sub_sec03 .tableArea .head li:first-child,
+.classList .sub_sec03 .tableArea .body li:first-child {
+  width: 65%;
+}
+.classList .sub_sec03 .tableArea .head li:nth-child(2),
+.classList .sub_sec03 .tableArea .body li:nth-child(2) {
+  width: 20%;
+}
+.classList .sub_sec03 .tableArea .head li:last-child,
+.classList .sub_sec03 .tableArea .body li:last-child {
+  width: 15%;
+}
+
+.classList .sub_sec03 .tableArea .body {
+  font-size: 15px;
+}
+.classList .sub_sec03 .tableArea .body li.term {
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+.classList .sub_sec03 .tableArea .body li.term > .point_red {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.classList .sub_sec03 .tableArea .body li a {
+  width: 80px;
+  font-size: 14px;
+}
+.classList .sub_sec03 .btnArea {
+  display: none;
+}
+
+
+
+
+/* 교육과정 - 수강신청하기 (상세보기) */
+.classDetail .sub_sec01 {
+  overflow: hidden;
+}
+.classDetail .sub_sec01 > a {
+  float: right;
+  width: 220px;
+  height: 37px;
+  line-height: 37px;
+}
+.classDetail .sub_sec01 > .start_b {
+  position: relative;
+  padding-bottom: 38px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #666;
+  align-items: end;
+}
+.classDetail .sub_sec01 > .start_b .point {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+.classDetail .sub_sec01 > .start_b > .img_box {
+  width: 232px;
+  height: 100%;
+}
+.classDetail .sub_sec01 > .start_b > .text_box {
+  width: calc(100% - 232px);
+  padding-left: 3%;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > span {
+  display: block;
+  width: 232px;
+  border: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+}
+.classDetail .sub_sec01 > .start_b > .img_box > span > img {
+  width: 100%;
+  height: auto;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > a.detailBtn {
+  display: block;
+  position: relative;
+  padding: 10px 5px;
+  margin-top: 14px;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > a.detailBtn:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+.classDetail .sub_sec01 > .start_b > .img_box > a.detailBtn > img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table {
+  width: 100%;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table caption {
+  width: 100%;
+  padding: 14px 0 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table tbody {
+  border: 1px solid #d5d5d5;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table tbody tr th,
+.classDetail .sub_sec01 > .start_b > .img_box > table tbody tr td {
+  padding: 5px 0;
+  border-bottom: 1px solid #d5d5d5;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table tbody tr th {
+  border-right: 1px solid #d5d5d5;
+}
+.classDetail .sub_sec01 > .start_b > .img_box > table tbody tr td {
+  padding-left: 4%;
+}
+
+.classDetail .sub_sec01 > .start_b > .text_box > p {
+  padding: 18px 0 30px;
+  border-bottom: 1px solid #d5d5d5;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+.classDetail .sub_sec01 > .start_b > .text_box > table {
+  font-size: 14px;
+  text-align: left;
+}
+.classDetail .sub_sec01 > .start_b .text_box > table tbody tr th,
+.classDetail .sub_sec01 > .start_b .text_box > table tbody tr td {
+  padding: 6px 0 3px;
+  line-height: 26px;
+}
+.classDetail .sub_sec01 > .start_b .text_box > table tbody tr td > .text_box_mb {
+  display: none;
+}
+.classDetail .sub_sec01 > .start_b .text_box > table tbody tr td > .text_box > p.point_bk {
+  font-weight: 500;
+}
+.classDetail .sub_sec02 .tab {
+  margin: 60px 0 33px;
+}
+.classDetail .sub_sec02 .tab > ul li {
+  width: calc(100% / 5);
+}
+.classDetail .sub_sec02 .tab_sec .processIntro_mb,
+.classDetail .sub_sec02 .tab_sec .classList_mb {
+  display: none;
+}
+.classDetail .sub_sec02 .tab_sec,
+.classDetail .sub_sec02 .tab_sec table {
+  width: 100%;
+  min-height: 400px;
+}
+.classDetail .sub_sec02 .tab_sec table tbody {
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.classDetail .sub_sec02 .tab_sec table tbody tr th,
+.classDetail .sub_sec02 .tab_sec table tbody tr td {
+  padding: 20px 18px;
+  border-bottom: 1px solid #d5d5d5;
+  vertical-align: middle;
+}
+.classDetail .sub_sec02 .tab_sec table tbody tr th {
+  border-right: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+}
+
+.classDetail .sub_sec02 .tab_sec.sec02 table tbody tr th,
+.classDetail .sub_sec02 .tab_sec.sec02 table tbody tr td {
+  padding: 10px 18px;
+}
+.classDetail .sub_sec02 .tab_sec.on {
+  display: flex;
+}
+
+
+
+/* 교육과정 - 수강신청하기 (등록) + (완료) */
+.classTbl .tableArea {
+  margin-bottom: 8px;
+}
+.classTbl .tableArea .head li:first-child,
+.classTbl .tableArea .body li:first-child {
+  width: 48%;
+}
+.classTbl .tableArea .head li:nth-child(2),
+.classTbl .tableArea .body li:nth-child(2) {
+  width: 20%;
+}
+.classTbl .tableArea .head li:nth-child(3),
+.classTbl .tableArea .body li:nth-child(3) {
+  width: 20%;
+}
+.classTbl .tableArea .head li:last-child,
+.classTbl .tableArea .body li:last-child {
+  width: 12%;
+}
+.classTbl .tableArea .body li {
+  height: 64px;
+  padding: 5px 18px;
+}
+
+
+
+
+/* 교육과정 - 수강신청하기(등록) */
+.classReg .sub_sec01 {
+  margin-bottom: 90px;
+}
+.classReg .sub_sec02 .chkArea {
+  padding: 22px;
+  border: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+}
+.classReg .sub_sec02 .chkArea .text_box {
+  padding-bottom: 14px;
+}
+.classReg .sub_sec02 .chkArea .text_box p {
+  float: left;
+  margin-right: 16px;
+  font-weight: 500;
+}
+.classReg .sub_sec02 .chkArea .chk_box {
+  width: 100%;
+}
+.classReg .sub_sec02 .chkArea .chk_box li {
+  margin-right: 20px;
+} 
+.classReg .sub_sec02 .chkArea .chk_box li label {
+  font-size: 14px;
+}
+.classReg .sub_sec02 .chkArea .chk_box li label input[type="checkbox"] {
+  margin-top: 2.4px;
+}
+.classReg .btnArea {
+  margin-top: 45px;
+}
+.classReg .btnArea > a {
+  width: 170px;
+}
+.classReg .btnArea > a + a {
+  width: 238px; 
+}
+
+
+
+
+/* 학습중인과정 + 패키지 / 학습대기과정 */
+.myCrs_wrap .sub_sec02 {
+  display: none;
+}
+.myCrs_wrap .sub_sec01 .tableArea .head li:first-child,
+.myCrs_wrap .sub_sec01 .tableArea .body li:first-child {
+  width: 53%;
+}
+.myCrs_wrap .sub_sec01 .tableArea .head li:nth-child(2),
+.myCrs_wrap .sub_sec01 .tableArea .body li:nth-child(2) {
+  width: 15%;
+}
+.myCrs_wrap .sub_sec01 .tableArea .head li:nth-child(3),
+.myCrs_wrap .sub_sec01 .tableArea .body li:nth-child(3) {
+  width: 22%;
+}
+.myCrs_wrap .sub_sec01 .tableArea .head li:last-child,
+.myCrs_wrap .sub_sec01 .tableArea .body li:last-child {
+  width: 10%;
+}
+.myCrs_wrap .btnArea {
+  display: none;
+}
+
+
+.myCrs_wrap .sub_sec01 .tableArea .body li > table {
+  font-size: 12px;
+}
+.myCrs_wrap .sub_sec01 .tableArea .body li > table tbody tr {
+  height: 54px; 
+}
+
+
+
+/* 학습중인과정_패키지 */
+.myCrs_wrap .sub_sec01 .tableArea .body.bodyPk li:first-child .month {
+  display: inline-flex;
+  height: 90%;
+  padding: 0 8px;
+  margin-right: 10px;
+  border: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+  align-items: center;
+}
+.myCrs_wrap .sub_sec01 .tableArea .body.bodyPk {
+  display: none;
+}
+.myCrs_wrap .sub_sec01 .tableArea .body.bodyPk.on {
+  display: flex;
+}
+.myCrs_wrap .sub_sec01 .tableArea .body li .toggleBtn {
+  height: 40px;
+}
+
+
+
+
+/* 나의강의실 - 학습대기과정 */
+.myCrsWait .sub_sec01 .select_box {
+  float: right;
+  width: 164px;
+  margin-bottom: 10px;
+}
+.myCrsWait .sub_sec01 .select_box select {
+  height: 36px;
+}
+.myCrsWait .sub_sec01 button.btnPrimary,
+.myCrsWait .sub_sec02 button.btnPrimary  {
+  pointer-events: none;
+}
+/* 학습완료과정 */
+.myCrsDone .sub_sec01 .tableArea .body li {
+  height: 278px;
+}
+.myCrsDone .sub_sec01 .tableArea .body li > table tbody tr {
+  height: 46px;
+}
+.myCrsDone .sub_sec01 .tableArea .body li > table tbody tr th, 
+.myCrsDone .sub_sec01 .tableArea .body li > table tbody tr td {
+  padding: 0 5px;
+}
+.myCrsDone .sub_sec01 .tableArea .body li > table tbody tr th {
+  width: 85px;
+}
+.myCrsDone .sub_sec01 .tableArea .body li > table tbody tr.bg_blue th {
+  font-weight: 500;
+  color: #333;
+}
+.myCrsDone .sub_sec01 .tableArea .head li:first-child,
+.myCrsDone .sub_sec01 .tableArea .body li:first-child {
+  width: 45%;
+}
+.myCrsDone .sub_sec01 .tableArea .head li:nth-child(2),
+.myCrsDone .sub_sec01 .tableArea .body li:nth-child(2) {
+  flex-direction: column;
+  width: 15%;
+}
+.myCrsDone .sub_sec01 .tableArea .head li:nth-child(3),
+.myCrsDone .sub_sec01 .tableArea .body li:nth-child(3) {
+  width: 19%;
+  padding: 0;
+}
+.myCrsDone .sub_sec01 .tableArea .head li:nth-child(4),
+.myCrsDone .sub_sec01 .tableArea .body li:nth-child(4) {
+  width: 11%;
+}
+.myCrsDone .tableArea .head li:last-child,
+.myCrsDone .tableArea .body li:last-child {
+  width: 10%;
+}
+.myCrsDone .sub_sec01 .tableArea .body li:nth-child(4) {
+  flex-direction: column;
+}
+.myCrsDone .sub_sec01 .tableArea .body li:nth-child(4) span + button {
+  margin-top: 10px;
+}
+
+
+/* 나의강의실 - 설문현황 */
+.mySurveryList table tbody tr td {
+  padding: 0 10px;
+}
+.mySurveryList table tbody tr td button.btnGray {
+  pointer-events: none;
+}
+
+
+/* 나의강의실 - 배송현황 */
+.myDlvy .select_box {
+  float: right;
+  width: 120px;
+  margin-bottom: 8px;
+}
+.myDlvy .tableArea .head li:first-child,
+.myDlvy .tableArea .body li:first-child {
+  width: 65%;
+}
+.myDlvy .tableArea .head li:nth-child(2),
+.myDlvy .tableArea .body li:nth-child(2) {
+  width: 25%;
+} 
+.myDlvy .tableArea .head li:last-child,
+.myDlvy .tableArea .body li:last-child {
+  width: 10%;
+}
+.myDlvy .tableArea .body li .toggleBtn {
+  height: 36px;
+}
+
+
+.myDlvy .tableArea .list li .tableArea {
+  padding: 2% 10px;
+  border-bottom: 1.5px dashed #999;
+  background-color: #f3f3f3;
+}
+.myDlvy .tableArea .list li .tableArea .head li:first-child,
+.myDlvy .tableArea .list li .tableArea .body li:first-child {
+  width: 8%
+}
+.myDlvy .tableArea .list li .tableArea .head li:nth-child(2),
+.myDlvy .tableArea .list li .tableArea .body li:nth-child(2) {
+  width: 57.3%;
+} 
+.myDlvy .tableArea .list li .tableArea .head li:nth-child(3),
+.myDlvy .tableArea .list li .tableArea .body li:nth-child(3){
+  width: 25.5%;
+}
+.myDlvy .tableArea .list li .tableArea .head li:last-child,
+.myDlvy .tableArea .list li .tableArea .body li:last-child {
+  width: 9.2%;
+}
+.myDlvy .tableArea .list li .tableArea .head {
+  border-top: 1px solid #d5d5d5;
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+}
+.myDlvy .tableArea .list li .tableArea .body {
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+  background-color: #fff;
+}
+.myDlvy .tableArea .list li .tableArea .body li {
+  height: 54px;
+}
+
+
+
+
+
+/* 북러닝, 이러닝, 스마트러닝, 스마트훈련 - 학습하기 */
+.classHome .sub_sec01 {
+  position: relative;
+  border-bottom: 2px solid var(--main-color);
+}
+.classHome .sub_sec01 .text_box {
+  padding-bottom: 15px;
+  align-items: flex-end;
+}
+.classHome .sub_sec01 .text_box > h3 {
+  width: 80%;
+  font-size: 22px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.classHome .sub_sec01 .text_box .right {
+  width: 20%;
+}
+.classHome .sub_sec01 .text_box .right .select_box {
+  float: right;
+  width: 140px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+.classHome .sub_sec01 .text_box .right .select_box select {
+  height: 32px;
+  font-size: 12px;
+}
+.classHome .sub_sec01 .text_box .right .tagArea {
+  float: right;
+}
+
+.classHome .sub_sec02 {
+  margin-top: 26px;
+  align-items: flex-start;
+}
+.classHome .sub_sec02 .img_box {
+  width: 232px;
+  height: auto;
+}
+.classHome .sub_sec02 .img_box > span {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+  font-weight: 500;
+}
+.classHome .sub_sec02 .img_box > span > img {
+  width: 100%;
+}
+.classHome .sub_sec02 .img_box .delivery {
+  margin: 14px 0 40px;
+}
+.classHome .sub_sec02 .img_box .delivery > em,
+.classHome .sub_sec02 .img_box .delivery > .addressBtn {
+  display: inline-block;
+  width: 50%;
+}
+.classHome .sub_sec02 .img_box .delivery > em {
+  color: #333;
+  text-align: center;
+}
+.classHome .sub_sec02 .img_box .delivery > .addressBtn {
+  padding: 10px 5px;
+  background-color: #fff;
+}
+.classHome .sub_sec02 .img_box .delivery > .addressBtn img {
+  margin: -3px 0 0 5px;
+}
+.classHome .sub_sec02 > table {
+  width: calc(100% - 232px - 3%);
+  margin-left: 3%;
+  text-align: left;
+}
+.classHome .sub_sec02 > table tbody tr th,
+.classHome .sub_sec02 > table tbody tr td {
+  padding: 15px 0 15px 1%;
+  border-bottom: 1px solid #d5d5d5;
+}
+.classHome .sub_sec02 > table tbody tr:first-child th,
+.classHome .sub_sec02 > table tbody tr:first-child td {
+  padding: 0 0 15px 1%;
+}
+.classHome .sub_sec02 > table tbody tr:last-child th,
+.classHome .sub_sec02 > table tbody tr:last-child td {
+  border-bottom: none;
+}
+.classHome .sub_sec02 > table tbody tr th {
+  width: 10%;
+  padding-left: 4px;
+}
+.classHome .sub_sec02 > table tbody tr td {
+  width: 90%;
+}
+.classHome .sub_sec02 > table tbody tr.service td > ul {
+  margin: 0 -6px;
+}
+.classHome .sub_sec02 > table tbody tr.service td > ul li {
+  display: inline-block;
+}
+.classHome .sub_sec02 > table tbody tr.service td > ul li > a {
+  padding: 2px 12px;
+  margin: 0 6px;
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  line-height: 35px;
+  border-radius: 15px;
+}
+
+.classHome .sub_sec03 {
+  padding: 27px 0 18px;
+  margin: 0 -10px 33px;
+  background-color: var(--gray-bg-color);
+  border-color: #666;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.classHome .sub_sec03 > .left {
+  display: inline-flex;
+  width: 43%;
+  padding: 0 5px 0 10px;
+}
+.classHome .sub_sec03 > .left .sec_left,
+.classHome .sub_sec03 > .left .sec_right {
+  height: 205px;
+  background-color: #fff;
+}
+.classHome .sub_sec03 > .left .sec_left {
+  width: 40%;
+  border: 1px solid #d5d5d5;
+}
+.classHome .sub_sec03 > .left .sec_left .top,
+.classHome .sub_sec03 > .left .sec_left .bottom {
+  position: relative;
+  height: 102.5px;
+}
+.classHome .sub_sec03 > .left .sec_left .top {
+  border-bottom: 1px solid #d5d5d5;
+}
+.classHome .sub_sec03 > .left .sec_left .top > div,
+.classHome .sub_sec03 > .left .sec_left .bottom > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.classHome .sub_sec03 > .left .sec_left .top > div > .text_box,
+.classHome .sub_sec03 > .left .sec_left .bottom > div > .text_box {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.classHome .sub_sec03 > .left .sec_left .top > div > .text_box > span,
+.classHome .sub_sec03 > .left .sec_left .bottom > div > .text_box > span {
+  float: left;
+}
+.classHome .sub_sec03 > .left .sec_left .top > div > .text_box > em,
+.classHome .sub_sec03 > .left .sec_left .bottom > div > .text_box > em {
+  float: right;
+}
+.classHome .sub_sec03 > .left .sec_right {
+  width: calc(60%);
+  padding: 5px;
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+}
+.classHome .sub_sec03 > .left .sec_right > div,
+.classHome .sub_sec03 > .left .sec_right > table {
+  width: 100%;
+  font-size: 18px;
+}
+.classHome .sub_sec03 > .left .sec_right > div > .head,
+.classHome .sub_sec03 > .left .sec_right > table thead tr th,
+.classHome .sub_sec03 > .left .sec_right > table tbody tr td {
+  border: 1px solid #fff;
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .left .sec_right > div > .head,
+.classHome .sub_sec03 > .left .sec_right > div > .body {
+  position: relative;
+  width: 100%;
+  height: 98px;
+  text-align: center;
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .left .sec_right > div > .head > em,
+.classHome .sub_sec03 > .left .sec_right > div > .body > em {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.classHome .sub_sec03 > .left .sec_right > div > .head > em > span,
+.classHome .sub_sec03 > .left .sec_right > div > .body > em > span {
+  display: block;
+}
+.classHome .sub_sec03 > .left .sec_right > table thead tr th {
+  height: 47.5px;
+}
+.classHome .sub_sec03 > .left .sec_right > table tbody tr td {
+  height: 50px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.classHome .sub_sec03 > .left .sec_right > table tbody tr td > span {
+  display: block;
+}
+.classHome .sub_sec03 > .left .sec_right > table tfoot {
+  height: 94.5px;
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .left .sec_right > table tfoot tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .left .sec_right > table tfoot tr {
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .left .sec_right > table tfoot tr td > span {
+  display: block;
+}
+.classHome .sub_sec03 > .right {
+  width: 57%;
+  padding: 0 10px 0 5px;
+  font-size: 12px;
+}
+.classHome .sub_sec03 > .right h4 {
+  display: block;
+  padding: 5px 0;
+  background-color: #e3ebf2;
+  font-size: 14px;
+  text-align: center;
+}
+.classHome .sub_sec03 > .right > table {
+  font-size: 13px;
+}
+.classHome .sub_sec03 > .right > table tbody tr {
+  background-color: #fff;
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .right > table tbody tr td span {
+  display: block;
+}
+.classHome .sub_sec03 > .right > table tbody tr td.assignment {
+  overflow: hidden;
+}
+.classHome .sub_sec03 > .right > table tbody tr td.assignment span {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: inherit;
+  margin: 0 auto;
+}
+.classHome .sub_sec03 > .right > table tbody tr td.assignment span > em {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+.classHome .sub_sec03 > .right > table tbody tr td.assignment span + span {
+  border-left: 1px solid #d5d5d5;
+}
+.classHome .sub_sec04 > .tab,
+.classHome .sub_sec04 > .tab_sec {
+  display: none;
+}
+.classHome .sub_sec05 .tab {
+  margin-bottom: 30px;
+}
+.classHome .sub_sec05 .tab > ul {
+  width: 100%;
+}
+.classHome .sub_sec05 .tab > ul > li {
+  width: calc(100% / 8);
+}
+.classHome .sub_sec05 .tab_sec table {
+  min-height: 360px;
+  margin-bottom: 66px;
+}
+.classHome .sub_sec05 .tab_sec table .text_left {
+  padding-left: 1%;
+  font-weight: 500;
+}
+.classHome .sub_sec05 .tab_sec table tbody {
+  font-size: 14px;
+}
+.classHome .sub_sec05 .tab_sec.sec08 table {
+  margin-bottom: 33px;
+}
+.classHome .sub_sec05 .tab_sec.sec08 > .btnArea {
+  width: 100%;
+  margin-bottom: 66px;
+  overflow: hidden;
+}
+.classHome .sub_sec05 .tab_sec.sec08 > .btnArea > a {
+  float: right;
+  width: 140px;
+  height: 37px;
+  line-height: 37px;
+}
+.classHome .sub_sec06 .board_st {
+  width: 50%;
+}
+.classHome .sub_sec06 .board_st p {
+  position: relative;
+}
+.classHome .sub_sec06 .board_st ul {
+  font-size: 14px;
+}
+.classHome .sub_sec06 .board_st p > a.moreBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.classHome .sub_sec05 .tab_sec .info {
+  flex-wrap: nowrap;
+  padding: 30px 48px;
+  margin-bottom: 30px;
+  border: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color); 
+} 
+.classHome .sub_sec05 .tab_sec .info .img_box {
+  padding-right: 28px;
+}
+.classHome .sub_sec05 .tab_sec .info .img_box .iconArea {
+  display: inline-flex;
+  position: relative;
+  width: 89px;
+  height: 89px;
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 80px;
+}
+.classHome .sub_sec05 .tab_sec .info .img_box .iconArea img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+.eLearn .sub_sec02 .img_box span {
+  margin-bottom: 40px;
+}
+.eLearn .sub_sec02 .img_box span + span {
+  display: none;
+}
+
+
+
+/* 스마트러닝 */
+.crsSwiper .swiper-wrapper .swiper-slide p {
+  padding: 5px 0;
+  text-align: center;
+  border-style: solid;
+  border-color: #d5d5d5;
+  border-width: 1px 0 1px 0;
+}
+.crsSwiper .swiper-wrapper .swiper-slide > span {
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: var(--gray-bg-color);
+  text-align: center;
+}
+.crsSwiper .swiper-wrapper .swiper-slide > span > img {
+  margin: 0 auto;
+}
+.crsSwiper .swiper-button-next, 
+.crsSwiper .swiper-button-prev {
+  top: 29px;
+  width: 18px;
+  height: 18px;
+  background: url(../../images/arrow_right_g_18x18.png) no-repeat;
+  background-size: cover;
+}
+.crsSwiper .swiper-button-prev {
+  transform: rotate(-180deg);
+}
+.crsSwiper .swiper-button-next:after, 
+.crsSwiper .swiper-button-prev:after {
+  font-size: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .gnb_wrap_main .gnb-bottom .logo a {
+    margin-left: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* 부가서비스 - 전자도서관, 지식창고, 진단센터 */
+  .e_book,
+  .kl_store {
+    flex-direction: column;
+    text-align: center;
+  }
+  .e_book .img_box,
+  .kl_store .img_box {
+    width: 80%;
+    padding: 0 0 29px;
+  }
+  .e_book .img_box img,
+  .kl_store .img_box img {
+    width: 100%;
+  }
+  .e_book .text_box,
+  .kl_store .text_box {
+    padding-left: 0;
+  }
+  .e_book .text_box a,
+  .kl_store .text_box a {
+    margin: 50px auto 10vh;
+  }
+  .diagnosis .process {
+    flex-direction: column;
+  }
+  .diagnosis .process dl {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+  .diagnosis .process dl dt {
+    font-size: 20px;
+  }
+  .diagnosis .text_box_cnt {
+    padding: 47px 0;
+  }
+
+  /* 북러닝 - 학습하기 */
+  .classHome .sub_sec05 .tab > ul li {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .classHome .sub_sec05 table thead tr th {
+    font-size: 14px;
+  }
+
+  /* 교육과정 - 수강신청과정 (리스트)*/
+  .classList .sub_sec01 input[type='search'] {
+    width: calc(100% - 84px);
+  }
+  .classList .sub_sec02 {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .classList .sub_sec02 .chkArea_list {
+    font-size: 14px;
+  }
+  .classList .sub_sec03 .tableArea .head li.term,
+  .classList .sub_sec03 .tableArea .body li.term {
+    display: none;
+  }
+  .classList .sub_sec03 .tableArea .head li:first-child,
+  .classList .sub_sec03 .tableArea .body li:first-child {
+    width: 82%;
+  }
+  .classList .sub_sec03 .tableArea .head li:last-child,
+  .classList .sub_sec03 .tableArea .body li:last-child {
+    width: 18%;
+  }
+  
+  .classHome .sub_sec01 .text_box {
+    padding: 15px 0;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  /* 회원정보 입력 화면 ( 마이페이지 / 회원가입 / 수강신청하기) */
+  #fill_info table tr th {
+    width: 123px;
+    padding: 0 5px;
+  }
+  #fill_info table tr td {
+    width: calc(100% - 123px);
+    padding: 12px 0;
+  }
+  #fill_info table tr td > input,
+  #fill_info table tr.corporationName td .select_box {
+    width: 50%;
+  }
+  #fill_info table tr td > span {
+    display: block;
+    margin: 5px 0 0 0;
+  }
+  #fill_info table tr.email td > input {
+    width: calc(100% / 3 - 10px);
+  }
+  #fill_info table tr.email td select {
+    width: calc(100% / 3 - 8px);
+    vertical-align: top;
+  }
+  #fill_info table tr.tel td input {
+    width: calc(100% / 3 - 8px);
+  }
+  #fill_infoo table tr.address td > .address_detail input {
+    width: 100%;
+  }
+  #fill_info table tr.regNum td strong.point_red {
+    display: block;
+    margin-top: 3px;
+  }
+
+
+
+  /* 교육과정 - 수강신청하기 (등록) + (완료)*/
+  .classTbl .tableArea .head li:first-child,
+  .classTbl .tableArea .body li:first-child {
+    width: 42%;
+  }
+  .classTbl .tableArea .head li:nth-child(2),
+  .classTbl .tableArea .body li:nth-child(2) {
+    width: 23%;
+  }
+  .classTbl .tableArea .head li:nth-child(3),
+  .classTbl .tableArea .body li:nth-child(3) {
+    width: 23%;
+  }
+  .classTbl .tableArea .head li:last-child,
+  .classTbl .tableArea .body li:last-child {
+    width: 12%;
+  }
+
+
+  /* 학습지원센터 - 공지사항 & 1:1문의 (보기)  */
+  .bbsReg_wrap table tbody tr td input[name='p_title'],
+  .bbsReg_wrap table tbody tr td .select_box.class_name,
+  .bbsReg_wrap table tbody tr td div.edit_box > textarea,
+  .bbsReg_wrap table tbody tr td div.file_attach {
+    width: 100%;
+  }
+  .bbsReg_wrap table tbody tr td select {
+    width: 100%;
+  }
+
+  
+
+  /* 회원가입 - 로그인  */
+  .login .login_form_wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login .loginArea_l,
+  .login .loginArea_r {
+    width: 70%;
+    margin: 0 0 0;
+  }
+
+
+
+  
+
+
+  /* 교육과정 - 수강신청하기 (등록) */
+  .classReg .sub_sec01 {
+    margin-bottom: 55px;
+  }
+
+
+  /* 교육과정 - 수강신청하기 (완료) */
+  .classRegDone .text_box {
+    margin-bottom: 46px;
+  }
+
+
+  /*  학습중인과정 + 패키지 / 학습대기과정 */
+  .myCrs_wrap .sub_sec01 .tableArea .head li:first-child,
+  .myCrs_wrap .sub_sec01 .tableArea .body li:first-child {
+    width: 80%;
+  }
+  .myCrs_wrap .sub_sec01 .tableArea .head li:nth-child(2),
+  .myCrs_wrap .sub_sec01 .tableArea .body li:nth-child(2) {
+    display: none;
+  }
+  .myCrs_wrap .sub_sec01 .tableArea .head li:nth-child(3),
+  .myCrs_wrap .sub_sec01 .tableArea .body li:nth-child(3) {
+    display: none;
+  }
+  .myCrs_wrap .sub_sec01 .tableArea .head li:last-child,
+  .myCrs_wrap .sub_sec01 .tableArea .body li:last-child {
+    width: 20%;
+  }
+
+
+  /* 학습완료과정 */
+  .myCrsDone .sub_sec01 .tableArea .head li:nth-child(4),
+  .myCrsDone .sub_sec01 .tableArea .body li:nth-child(4) {
+    display: none;
+  }
+
+
+  /* 북러닝 - 학습하기 */
+  .sub_layerPop .closeArea,
+  .classHome .tab > ul > li.exam,
+  .classHome .tab > ul > li.eval,
+  .classHome .tab > ul > li.assignment,
+  .classHome .tab > ul > li.finalEval,
+  .classHome .tab > ul > li.survey,
+  .classHome .tab > ul > li.assignment2,
+  .classHome .sub_sec03 > .right > h4,
+  .classHome .sub_sec03 > .right > table {
+    display: none;
+  }
+  .classHome .sub_sec01 .text_box > h3 {
+    width: 60%;
+    font-size: 18px;
+    white-space: break-spaces;
+  }
+  .classHome .sub_sec02 > .img_box {
+    width: 100%;
+    text-align: center;
+  }
+  .classHome .sub_sec02 > .img_box > span > img {
+    width: 40%;
+    padding: 3%;
+  }
+  .classHome .sub_sec02 .img_box > .delivery {
+    margin: 8px 0 40px;
+  }
+  .classHome .sub_sec02 > table {
+    width: 100%;
+    margin-left: 0;
+  }
+  .classHome .sub_sec02 > table tbody tr.service td > ul {
+    margin: 0;
+  }
+  .classHome .sub_sec02 > table tbody tr.service td > ul li > span {
+    margin: 0 3px;
+    font-size: 13px;
+  }
+  .classHome .sub_sec02 > table tbody tr.service td > ul li > a {
+    margin: 0;
+  }
+  .classHome .sub_sec03 > .left {
+    width: 100%;
+    padding: 0 5px 0 5px;
+  }
+  .classHome .sub_sec04 {
+    margin-bottom: 66px;
+  }
+  .classHome .sub_sec04 .tab {
+    margin-bottom: 33px;
+  }
+  .classHome .sub_sec04 .tab > ul,
+  .classHome .sub_sec05 .tab > ul {
+    width: 100%;
+    font-size: 12px;
+  }
+  .classHome .sub_sec04 .tab > ul > li,
+  .classHome .sub_sec05 .tab > ul > li {
+    width: calc(100% / 3);
+    font-size: 14px;
+  }
+  .classHome .sub_sec04 .tab_sec > table {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .classHome .sub_sec04 .tab_sec > table tbody tr th {
+    background-color: var(--gray-bg-color);
+  }
+  .classHome .sub_sec04 .tab_sec > table tbody tr th,
+  .classHome .sub_sec04 .tab_sec > table tbody tr td {
+    height: 44px;
+  }
+  .classHome .sub_sec04 .tab_sec > table tbody tr td {
+    padding-left: 20px;
+  }
+  .classHome .sub_sec05 .tab ul li {
+    border-right: 1px solid #d5d5d5;
+  }
+  .classHome .sub_sec05 .tab_sec .info {
+    display: none;
+  }
+  .classHome .sub_sec05 .tab_sec table .text_left {
+    padding-left: 1%;
+    font-weight: 500;
+  }
+  .classHome .sub_sec05 .tab_sec table tbody tr td > span {
+    display: block;
+  }
+  .classHome .sub_sec05 .tab_sec.sec08 table {
+    margin-bottom: 33px;
+  }
+  .classHome .sub_sec05 .tab_sec.sec08 > .btnArea {
+    width: 100%;
+    margin-bottom: 66px;
+    overflow: hidden;
+  }
+  .classHome .sub_sec05 .tab_sec.sec08 > .btnArea > a {
+    float: right;
+    width: 140px;
+    height: 37px;
+    line-height: 37px;
+  }
+  .board_st {
+    padding: 0 2%;
+  }
+
+
+
+}
+@media screen and (max-width: 540px) {
+  /* 회원정보 입력 화면 ( 마이페이지 / 회원가입 / 수강신청하기) */
+  .contents .step {
+    display: none;
+  } 
+  .contents .step_mb {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-color: #d5d5d5;
+    border-width: 1px 0;
+    border-style: solid;
+  }
+  .contents .step_mb > p > em {
+    font-weight: 500;
+  }
+
+
+  #fill_info table tr th {
+    width: 20%;
+    padding: 0 3px;
+  }
+  #fill_info table tr td {
+    width: 80%;
+    padding: 12px 0;
+  }
+  #fill_info table tr td .necessary_text {
+    display: none;
+  }
+  #fill_info table tr td .select_box select {
+    font-size: 14px;
+  }
+  #fill_info table tr td input,
+  #fill_info table tr td .input_box,
+  #fill_info table tr.orderMsg td input,
+  #fill_info table tr.userId td .input_box,
+  #fill_info table tr.address td > .address_detail input,
+  #fill_info table tr.corporationName td .select_box,
+  #fill_info table tr.corporationName td select {
+    width: 100%;
+  }
+  #fill_info table tr.birth td .input_box .select_box {
+    width: calc(100% / 3 - 3px);
+  }
+  #fill_info table tr.address td 
+  #fill_info table tr.userId td input {
+    width: calc(100% - 71px)
+  }
+
+  #fill_info table.table_sec03 {
+    margin-bottom: 12px;
+  }
+
+
+  /* 학습지원센터 - 공지사항 & 1:1문의하기 (작성) */
+  .bbsReg_wrap table tbody tr th {
+    display: none;
+  }
+  .bbsReg_wrap table tbody tr td:first-of-type {
+    padding-top: 8px;
+  }
+  .bbsReg_wrap table tbody tr td {
+    width: 100%;
+    height: 48px;
+    border-bottom: none;
+  }
+  .bbsReg_wrap table tbody tr td .select_box {
+    width: 100%;
+  }
+  .bbsReg_wrap table tbody tr td .select_box select {
+    font-size: 14px;
+  }
+  .bbsReg_wrap table tbody tr td div.edit_box {
+    padding: 4px 0 0 0;
+  }
+  .bbsReg_wrap .btnArea button {
+    width: 129px;
+    height: 37px;
+    margin: 30px 3px 0;
+    font-size: 16px;
+    line-height: 37px;
+  }
+
+
+
+  /* 교육과정  - 수강신청과정 (리스트) */
+  .classList .sub_sec03 .tableArea .head {
+    width: 26%;
+    height: auto;
+    line-height: 1;
+  }
+  .classList .sub_sec03 .tableArea .head li {
+    justify-content: center;
+    align-items: center;
+  }
+  .classList .sub_sec03 .tableArea .body {
+    width: 74%;
+  }
+
+  /* 교육과정 - 수강신청하기 (등록), (완료) */
+  .classTbl .tableArea .head {
+    width: 20%;
+    height: 64px;
+    line-height: 64px;
+  }
+
+  .classTbl .tableArea .body {
+    width: 80%;
+    line-height: 17px;
+  }
+  .classTbl .tableArea .head li:first-child,
+  .classTbl .tableArea .body li:first-child,
+  .classTbl .tableArea .head li:nth-child(2),
+  .classTbl .tableArea .body li:nth-child(2),
+  .classTbl .tableArea .head li:nth-child(3),
+  .classTbl .tableArea .body li:nth-child(3),
+  .classTbl .tableArea .head li:last-child,
+  .classTbl .tableArea .body li:last-child {
+    width: 100%;
+    height: 64px;
+  }
+  .classTbl .tableArea .head li:first-child,
+  .classTbl .tableArea .head li:nth-child(2),
+  .classTbl .tableArea .head li:nth-child(3),
+  .classTbl .tableArea .head li:last-child {
+    background-color: var(--gray-bg-color);
+  }
+  .classTbl .tableArea .body li:first-child,
+  .classTbl .tableArea .body li:nth-child(2),
+  .classTbl .tableArea .body li:nth-child(3),
+  .classTbl .tableArea .body li:last-child {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+
+
+  /* 부가서비스 */
+  .e_book .img_box,
+  .kl_store .img_box {
+    width: 100%;
+  }
+
+
+
+  /* 학습지원센터 - FAQ */
+  .uFAQ .tab.tab_page > ul > li {
+    width: calc(100% / 4);
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .uFAQ .tab_sec {
+    margin-top: 35px;
+  }
+  .uFAQ .tab_sec ul li .tab_title {
+    padding: 5px 0;
+    text-align: left;
+  }
+  .uFAQ .tab_sec ul li .tab_title > p, 
+  .uFAQ .tab_sec ul li .tab_content > p,
+  .uFAQ .tab_sec ul li .tab_title > span {
+    width: 100%;
+    padding: 0 0;
+    font-size: 13px;
+    text-align: left;
+  }
+  .uFAQ .tab_sec ul li .tab_title > span {
+    display: block;
+  }
+  .uFAQ .tab_sec ul li .tab_title > p {
+    width: 95%;
+  }
+  .uFAQ .tab_sec ul li .tab_content > span {
+    display: none;
+  }
+  .uFAQ .tab_sec ul li .tab_content > p {
+    padding: 0 10px;
+  }
+
+
+
+  /*  회원가입 - 로그인 */
+  .login .loginArea_l,
+  .login .loginArea_r {
+    width: 87%;
+  }
+  .login .loginArea_l > li .loginBtn {
+    font-size: 16px;
+  }
+
+
+  
+  /* 회원가입 - 회원가입 - 회원정보입력 */
+  .uJoin .btnArea > button {
+    width: 100%;
+    font-size: 16px;
+  }
+  .uJoin .btnArea > button:first-child {
+    display: none;
+  }
+
+
+  
+  /* *
+   * 마이페이지   - 개인정보수정 완료 / modifyProfileDone
+   * 마이페이지   - 개인정보수정 인증 / modifyProfileConfirm
+   * 회원가입     - 회원가입완료 / uJoinDone
+   * 교육과정     - 수강신청하기 완료 / classRegDone
+   */
+  .classRegDone .text_box img, 
+  .uJoinDone .text_box img, 
+  .modifyProfileDone .text_box img, 
+  .modifyProfileConfirm .text_box img {
+    margin-bottom: 20px;
+  }
+
+
+  /* 회원가입 - 아이디&비밀번호찾기 */
+  .uFindForm .tab.tab_page {
+    margin-bottom: 30px;
+  }
+  .uFindForm .tab.tab_page > ul li {
+    width: 50%;
+  }
+  .uFindForm .tab_sec div.radio_box {
+    padding-left: 10px;
+  }
+  .uFindForm .tab_sec div.radio_box p {
+    display: none;
+  }
+  .uFindForm .tab_sec .findTel_contents > li > div > label {
+    width: 72px;
+    padding: 0 10px;
+  }
+  .uFindForm .tab_sec .findTel_contents > li > div > input,
+  .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box  {
+    width: calc(100% - 72px - 13px);
+  }
+
+  .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > .select_box,
+  .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > input,
+  .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > button[type='button'] {
+    width: calc(100% / 4);
+  }
+  .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box > button[type='button'] {
+    font-size: 12px;
+  }
+  .uFindForm .tab_sec .findTel_contents > li.p_otp_key > .text_box > p {
+    margin-left: 72px;
+  }
+  .uFindForm .btnArea > button, .uPwdCgForm .btnArea > button {
+    width: 100%;
+    margin: 20px auto 0;
+    font-size: 16px;
+  }
+  .uFindForm .tab_sec div.radio_box:last-child {
+    padding: 20px 0 20px 10px;
+  }
+
+
+
+  /* 회원가입 - 약관동의 */
+  .uAuthForm .self_auth > .self_auth_b > p {
+    text-align: center;
+  }
+  .uAuthForm .self_auth > .self_auth_b > ul {
+    margin: 0;
+  }
+
+
+  
+  /* 교육과정 - 수강신청과정 (리스트) */
+  .classList .sub_sec01::after {
+    display: block;
+    content: '';
+    height: 1px;
+    margin: 10px 0 15px;
+    background-color: #d5d5d5;
+  }
+  .classList .sub_sec02 {
+    display: none;
+  }
+  .classList .sub_sec03 .tableArea .head li,
+  .classList .sub_sec03 .tableArea .head li.term,
+  .classList .sub_sec03 .tableArea .body li.term {
+    display: flex;
+  }
+
+  .classList .sub_sec03 .tableArea .head li:last-child,
+  .classList .sub_sec03 .tableArea .body li:last-child {
+    display: none;
+  }
+  .classList .sub_sec03 .tableArea .head li:first-child,
+  .classList .sub_sec03 .tableArea .body li:first-child {
+    width: 100%;
+    min-height: 270px;
+  }
+  .classList .sub_sec03 .tableArea .head li.term,
+  .classList .sub_sec03 .tableArea .body li.term {
+    width: 100%;
+    height: 72px;
+  }
+  .classList .sub_sec03 .tableArea .head li {
+    background-color: var(--gray-bg-color);
+  }
+  .classList .sub_sec03 .tableArea .body li {
+    padding: 10px 10px;
+    border-left: none;
+    align-items: flex-start;
+  }
+  .classList .sub_sec03 .tableArea .body li:first-child {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .classList .sub_sec03 .tableArea .body li:first-child > .img_box {
+    height: 91px;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  .classList .sub_sec03 .tableArea .body li:first-child > .img_box > img {
+    height: 100%;
+  }
+  .classList .sub_sec03 .tableArea .body li:first-child > .text_box {
+    width: 100%;
+  }
+  .classList .sub_sec03 .tableArea .body li:first-child > .text_box > .tagArea {
+    margin-bottom: 10px;
+  }
+  .classList .sub_sec03 .tableArea .body li.term {
+    position: relative;
+    text-align: left;
+  }
+  .classList .sub_sec03 .tableArea .body li.term > .point_red {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .classList .sub_sec03 .btnArea {
+    display: block;
+    margin: 8px 0 48px;
+  }
+  .classList .sub_sec03 .btnArea > a {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 3px;
+  }
+
+
+
+  /* 교육과정 - 수강신청하기 (상세보기) */
+  .classDetail .sub_sec01 > a {
+     float: none;
+     width: 100%;
+     margin: 0 auto;
+     font-size: 16px;
+   }
+  .classDetail .sub_sec01 > .start_b {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .classDetail .sub_sec01 > .start_b > .img_box {
+    width: 100%
+  }
+  .classDetail .sub_sec01 > .start_b > .img_box > span {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: none;
+    text-align: center;
+  }
+  .classDetail .sub_sec01 > .start_b > .img_box > span > img {
+    width: auto;
+  }
+  .classDetail .sub_sec01 > .start_b > .img_box > a.detailBtn {
+    margin: 0 0 14px;
+  }
+  .classDetail .sub_sec01 > .start_b > .img_box > table {
+    display: none;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box {
+    width: 100%;
+    padding-left: 0;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > p {
+    padding: 10px 0 20px;
+    border-bottom: none;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > table {
+    border-color: #d5d5d5;
+    border-style: solid;
+    border-width: 2px 1px 1px 1px;
+    border-top-color: var(--main-color);
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr th,
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr td {
+    padding: 8px 8px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr th {
+    border-right: 1px solid #d5d5d5;
+    background-color: var(--gray-bg-color);
+    text-align: center;
+    vertical-align: middle;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr td {
+    padding: 8px 15px;
+  }
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr td > .block_mb,
+  .classDetail .sub_sec01 > .start_b > .text_box > table tbody tr td > .text_box {
+    display: none;
+  }
+  .classDetail .sub_sec01 > .start_b .text_box > table tbody tr td > .text_box_mb {
+    display: block;
+  }
+  
+  .classDetail .sub_sec02 {
+    font-size: 14px;
+  }
+  .classDetail .sub_sec02 .tab {
+    margin: 28px 0 33px;
+  }
+  .classDetail .sub_sec02 .tab > ul li {
+    width: calc(100% / 3);
+    font-size: 14px;
+  }
+  .classDetail .sub_sec02 .tab_sec table {
+    display: none;
+  }
+  .classDetail .sub_sec02 .tab_sec .processIntro_mb,
+  .classDetail .sub_sec02 .tab_sec .classList_mb {
+    display: block;
+  }
+  
+
+  /* 교육과정 - 수강신청하기 (등록) */
+  .classReg .sub_sec02 .chkArea {
+    padding: 12px; 
+  }
+  .classReg .btnArea {
+    margin-top: 18px;
+  }
+  .classReg .btnArea > a:first-child {
+    display: none;
+  }
+  .classReg .btnArea > a + a {
+    width: 100%;
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+  
+
+  /* 학습중인과정 + 패키지 / 학습대기과정 */
+  .myCrs_wrap .sub_sec01 {
+    display: none;
+  }
+  .myCrs_wrap .sub_sec02 {
+    display: block;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li {
+    padding: 15px 18px;
+    margin-bottom: 12px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .rowTb {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .rowTb tbody tr th {
+    background-color: #f8f8f8;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .rowTb tbody tr td {
+    padding: 16px;
+    background-color: #fff;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .rowTb tbody tr td .tagArea {
+    padding-bottom: 8px;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .btnArea {
+    display: block;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li .btnArea button {
+    width: 100%;
+  }
+
+  .myCrs_wrap .sub_sec02 > ul > li.pk .rowTb tbody tr th {
+    border-right: 1px solid #d5d5d5;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li.pk .rowTb tbody tr th.month {
+    padding: 0 3px;
+  }
+
+  .myCrs_wrap .sub_sec02 > ul > li.pk > ul > li::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin:  12px 0;
+    background-color: #a9a9a9;
+  }
+  .myCrs_wrap .sub_sec02 > ul > li.pk .btnArea button img {
+    transform: rotate(90deg);
+  }
+
+
+
+  /* 학습하기 ( 북러닝, 이러닝+스마트러닝, 스마트훈련 )*/
+  .classHome .sub_sec01 > .text_box {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .classHome .sub_sec01 .text_box > h3 {
+    width: 100%;
+    font-size: 18px;
+    white-space: break-spaces;
+  }
+  .classHome .sub_sec01 .text_box .right {
+    width: 100%;
+  }
+  .classHome .sub_sec01 .text_box .right .tagArea {
+    float: left;
+    margin: 8px 0 3px;
+  }
+  .classHome .sub_sec02 > .img_box > span > img {
+    width: 50%;
+  }
+  .classHome .sub_sec02 > table tbody tr:first-child th {
+    padding: 0 1.5% 15px 0;
+  }
+  .classHome .sub_sec02 > table tbody tr th {
+    width: 27%;
+    padding-right: 4px;
+  }
+  .classHome .sub_sec02 > table tbody tr th > em {
+    display: block;
+  }
+  .classHome .sub_sec02 > table tbody tr td {
+    width: 73%;
+  }
+  .classHome .sub_sec03 {
+    padding: 27px 2% 18px;
+    margin: 0 0 33px;
+  }
+  .classHome .sub_sec03 > .left .sec_right > div,
+  .classHome .sub_sec03 > .left .sec_right > table {
+    font-size: 16px;
+  }
+  .classHome .sub_sec04 > .tab,
+  .classHome .sub_sec04 > .tab_sec.on {
+    display: block;
+  }
+  .classHome .sub_sec05 .tab_sec table.colTb,
+  .classHome .sub_sec05 .tab_sec > .btnArea {
+    display: none;
+  }
+  .classHome .sub_sec05 .tab_sec table {
+    display: table;
+  }
+  .classHome .sub_sec05 .tab_sec table {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    text-align: left;
+  }
+  .classHome .sub_sec05 .tab_sec table tbody tr th {
+    padding: 3%;
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    font-weight: 300;
+    vertical-align: middle;
+  }
+  .classHome .sub_sec05 .tab_sec table tbody tr td {
+    border-bottom: 1px solid #d5d5d5;
+    background-color: var(--gray-bg-color);
+    text-align: center;
+    vertical-align: middle;
+  }
+  .classHome .sub_sec05 .tab_sec table tbody tr td > button {
+    width: 80%;
+    height: 27px;
+    border-radius: 3px;
+  }
+  .classHome .sub_sec06 {
+    flex-wrap: wrap;
+  }
+  .classHome .sub_sec06 .board_st {
+    width: 100%;
+    margin-bottom: 66px;
+  }
+
+
+  
+
+  @media screen and (max-width: 414px) {
+    /* 회원정보 입력 화면 ( 마이페이지 / 회원가입 / 수강신청하기) */
+    #fill_info table {
+      margin-bottom: 55px;
+    }
+    #fill_info table + table + table {
+      margin-bottom: 5px;
+    }
+    #fill_info table tr th {
+      width: 28.5%;
+    }
+    #fill_info table tr td {
+      width: 78%;
+    }
+    #fill_info table tbody.payArea tr td p {
+      line-height: 18px;
+    }
+    #fill_info table tr.payType td .tbl_val em {
+      display: block;
+      margin-left: 0;
+    }
+
+
+
+    /* 부가서비스 - 전자도서관, 지식창고 */
+    .e_book .text_box a,
+    .kl_store .text_box a {
+      width: 100%;
+      font-size: 16px;
+    }
+
+
+    .bbs_wrap .colTb {
+      display: none;
+    }
+    .bbs_wrap .rowTb {
+      display: table;
+    }
+    .bbs_wrap .rowTb td {
+      height: 55px;
+    }
+    .bbs_wrap .rowTb td em {
+      display: block;
+      font-size: 12px;
+      color: #b4b4b4;
+    }
+    .bbs_wrap .btnArea {
+      margin: 17px 0 24px 0;
+    }
+    .bbs_wrap .btnArea > a {
+      width: 100%;
+      height: 37px;
+      font-size: 16px;
+    }
+
+
+    /* 학습지원센터 - 1:1문의하기 */
+    .lrnQnA .bbs_wrap .rowTb tbody tr th {
+      width: 20%;
+      padding: 10px 0;
+      color: var(--main-color);
+      text-align: left;
+    }
+    .lrnQnA .bbs_wrap .rowTb tbody tr th > span {
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      color: #b4b4b4;
+    }
+    .lrnQnA .bbs_wrap .rowTb tbody tr td {
+      width: 80%;
+      padding-left: 5px;
+      font-weight: 500;;
+    }
+    
+
+
+    .bbsView_wrap h2 {
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    
+  
+
+
+    
+    
+
+    /* *
+     * 마이페이지   - 개인정보수정 완료 / modifyProfileDone
+     * 마이페이지   - 개인정보수정 인증 / modifyProfileConfirm
+     * 회원가입     - 회원가입완료 / uJoinDone
+     * 교육과정     - 수강신청하기 완료 / classRegDone
+     */
+    .classRegDone .text_box,
+    .uJoinDone .text_box,
+    .modifyProfileDone .text_box,
+    .modifyProfileConfirm .text_box {
+      font-size: 16px;
+    }
+    
+
+
+    /* 마이페이지 - 개인정보수정(인증) */
+    .modifyProfileConfirm .btnArea {
+      width: auto;
+    }
+    .modifyProfileConfirm .text_box {
+      font-size: 14px;
+    }
+    .modifyProfileConfirm .btnArea > a {
+      font-size: 18px;
+    }
+
+
+
+    /* 마이페이지 - 개인정보수정(등록) */
+    .modifyProfile .btnArea > button {
+      width: calc(100% / 2 - 2px);
+      font-size: 16px;
+    }
+
+
+
+    /* 마이페이지 - 개인정보 수정(완료) */
+    .modifyProfileDone .text_box p {
+      width: 60%;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    .modifyProfileDone .btnArea > a {
+      width: 100%;
+      margin: 37px auto 0;
+      font-size: 16px;
+    }
+
+
+    /* 회원가입 - 아이디 & 비밀번호 찾기 */
+    .uFindForm .tab_sec .findTel_contents > li.tel > div > .input_box em {
+      margin: 2px;
+    }
+
+
+    /* 회원가입 - 아이디 + 비밀번호 찾기 (완료) */
+    .uFFDone .tab_sec .text_box {
+      font-size: 16px;
+    }
+    .uFFDone .tab_page > ul > li {
+      width: 50%;
+    }
+    .uFFDone .tab_sec .extra > em {
+      display: block;
+    }
+    .uFFDone .tab_sec .extra > em > a{
+      border-bottom: 1px solid var(--main-color);
+      color: var(--main-color);
+    }
+
+
+
+
+    /* 회원가입 - 약관동의 */
+    .uAuthForm .self_auth > .self_auth_b > p {
+      text-align: center;
+    }
+    .uAuthForm .self_auth > .self_auth_b > ul {
+      flex-direction: column;
+    }
+
+    
+
+    /* 회원가입 - 완료 */
+    .uJoinDone > .text_box {
+      padding-top: 25px;
+    }
+    .uAuthForm .self_auth > .self_auth_t {
+      flex-direction: column;
+      border: none;
+    }
+    .uAuthForm .self_auth > .self_auth_t li {
+      width: 100%;
+      margin-bottom: 5px;
+      border: 1px solid #d5d5d5;
+    }
+    .uAuthForm .self_auth > .self_auth_t li:first-child::after {
+      display: none;
+    }
+    .uAuthForm .self_auth > .self_auth_t li > button {
+      width: 100%;
+    }
+    .uAuthForm .self_auth > .self_auth_b {
+      padding: 30px 25px;
+      margin-top: 0;
+    }
+    .uAuthForm .self_auth > .self_auth_b > .text_box {
+      text-align: center;
+    }
+    .uAuthForm .self_auth > .self_auth_b > .text_box > p > strong > em {
+      display: block;
+    }
+    .uAuthForm .self_auth > .self_auth_b > .text_box > p + p {
+      display: none;
+    }
+    .uAuthForm .self_auth > .self_auth_b > ul > li { 
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .uAuthForm .self_auth > .self_auth_b > ul > li + li + li {
+      margin-bottom: 0;
+    }
+    .uAuthForm .self_auth > .self_auth_b > ul > li > a > .img_box {
+      margin: 0 0 5px;
+    }
+
+
+    /* 교육과정 - 수강신청하기 (완료) */
+    .classRegDone .text_box {
+      margin-bottom: 26px;
+    }
+    .classRegDone .btnArea > a {
+      width: 100%;
+      margin: 28px auto 0;
+    }
+
+
+    /* 나의 강의실 - 학습중인 과정 */
+    .sub_title_state em {
+      display: none;
+    }
+    .sub_title_state span {
+      display: block;
+    }
+
+    /* 나의 강의실 - 설문현황 */
+    .mySurveryList .rowTb tbody tr td {
+      padding: 2px 0;
+    }
+    .mySurveryList .rowTb tbody tr td span b {
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: 300;
+    }
+    .mySurveryList .rowTb tbody tr td span em {
+      display: inline-block;
+    }
+
+  }
+
+  
+}
