@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.0/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+  <script src="/assets/js/plugins/cavas.js"></script>
+  <script src="/assets/js/plugins/fonts.js"></script>
+  <title>PDF and Excel Example</title>
+</head>
+
+<body>
+  <button onclick="downloadPDF()">Download PDF</button>
+  <button onclick="downloadExcel()">Download Excel</button>
+
+  <script>
+    function pixelsToMillimeters(pixels, ppi) {
+      ppi = ppi || 96;
+      const inchesToMillimeters = 25.4; // 1인치당 밀리미터
+      const millimeters = pixels / ppi * inchesToMillimeters; // 픽셀을 밀리미터로 변환
+      return millimeters;
+    }
+
+    function loadImageAsArrayBuffer(url) {
+      return fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
+          }
+          return response.arrayBuffer();
+        });
+    }
+
+    // 공통 데이터
+    let data1 = [
+      ["훈련기관명", "(주)알파코"],
+      ["소재지", "[ 04794 ] 서울 성동구 성수이로 113 제강빌딩 7층"],
+      ["훈련기관유형", "기타"],
+      ["관할관서", "서울동부고용센터"],
+      ["훈련과정명", "2023년 국민은행 DIGI Campus 2기"],
+      ["NCS(코드)", ""],
+      ["주훈련대상", "DIGI Camp"],
+      ["훈련기간 / 회차", "2023-02-01 ~ 2023-12-15"],
+      ["성명", "권현진"],
+      ["생년월일", "1900-00-00"],
+      ["훈련기간", "2023-12-09 ~ 2023-12-15"],
+      ["훈련일수", "2"],
+      ["출석일수", "2"],
+      ["결석일수", "0"],
+    ];
+
+    let data2 = [
+      ['2023-12-00', '0-', '-', '결석'],
+      ['2023-12-01', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-02', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-03', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-04', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-05', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-06', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-07', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-08', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-09', '08:12:49', '17:12:33', '조퇴'],
+      ['2023-12-10', '08:12:49', '17:12:33', '조퇴'],
+
+    ];
+
+    // PDF 다운로드 함수
+    function downloadPDF() {
+      window.jsPDF = window.jspdf.jsPDF;
+      const doc = new jsPDF("p", "mm", "a4");
+      doc.addFileToVFS("malgun.ttf", _fonts); //_fonts 변수는 Base64 형태로 변환된 내용입니다.
+
+      doc.addFont("malgun.ttf", "malgun", "normal");
+      doc.setFont("malgun");
+      doc.setFontSize(12);
+
+      // 첫번째 테이블
+      doc.text('훈련 정보', 15, 20);
+      doc.autoTable({
+        body: data1,
+        styles: { font: "malgun", fontStyle: "normal" },
+        startY: 25,
+        showHead: false,
+        columnStyles: {
+          0: { fillColor: [41, 128, 185], textColor: 255, fontStyle: 'bold' }
+        }
+      });
+
+      // 두 번째 테이블
+      doc.text('출석 현황', 15, doc.lastAutoTable.finalY + 40);
+      doc.autoTable({
+        head: [['날짜', '입실시간', '퇴실시간', '출석결과']],
+        body: data2,
+        startY: doc.lastAutoTable.finalY + 15 + 10,
+        styles: { font: "malgun", fontStyle: "normal" },
+        theme: 'striped'
+      });
+
+      // 이미지 원본 크기를 가져오기
+      const img = new Image();
+      img.src = '/assets/images/alpaco-officialseal.png';
+
+      // PDF 페이지의 가로 및 세로 중앙 좌표 계산
+      const pageWidth = doc.internal.pageSize.width;
+      const pageHeight = doc.internal.pageSize.height;
+
+      // 이미지를 PDF에 추가 (50% 크기로 축소하여 가운데 정렬)
+      // addImage(이미지 객체, 이미지 포맷, X 좌표, Y 좌표, 이미지 너비, 이미지 높이)
+      //doc.addImage(img, 'PNG', centerX - (img.width * 0.25), (pageHeight - 10) - (img.  * 0.25), img.width * 0.5, img.height * 0.5);
+      img.onload = function () {
+        doc.addImage(img, 'PNG',
+          (pageWidth / 2) - pixelsToMillimeters(img.width / 4),
+          pageHeight - 10 - pixelsToMillimeters(img.height / 2),
+          pixelsToMillimeters(img.width / 2),
+          pixelsToMillimeters(img.height / 2));
+        doc.save('TEST_PDF.pdf'); // 파일 저장
+      }
+
+    }
+
+    // Excel 다운로드 함수
+    function downloadExcel() {
+
+      const workbook = new ExcelJS.Workbook();
+
+      // 첫 번째 시트
+      const worksheet1 = workbook.addWorksheet('출석부');
+
+      // 데이터 추가
+      data1.forEach((row, rowIndex) => {
+        worksheet1.addRow(row);
+
+        // 행 높이 설정
+        worksheet1.getRow(rowIndex + 1).height = 20;
+
+        // 첫 번째 열에 배경색 추가
+        worksheet1.getCell(rowIndex + 1, 1).style = {
+          fill: {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: '5accff' } // 파랑색
+          }
+        };
+      });
+
+      // 열의 너비를 데이터에 맞추어 동적으로 조정
+      worksheet1.columns.forEach((column, i) => {
+        if (i === 0) {
+          column.width = 15;
+        } else {
+          column.width = 60;
+        }
+      });
+
+      // 두 번째 시트
+      const worksheet2 = workbook.addWorksheet('출석현황');
+      // 첫 번째 행에 배경색 추가
+      const headerRow = worksheet2.addRow(['날짜', '입실시간', '퇴실시간', '출석결과']);
+      headerRow.eachCell((cell, colNumber) => {
+        cell.style = {
+          fill: {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: '5accff' } // 배경색
+          }
+        };
+      });
+      
+      data2.forEach(row => {
+        worksheet2.addRow(row);
+      });
+
+      // 열의 너비를 데이터에 맞추어 동적으로 조정
+      worksheet2.columns.forEach(column => {
+        let maxLength = 0;
+        column.eachCell({ includeEmpty: true }, cell => {
+          const columnLength = cell.value ? cell.value.toString().length : 10; // 셀 값이 비어있을 경우 최소 길이 10
+          maxLength = Math.max(maxLength, columnLength);
+        });
+        column.width = maxLength < 10 ? 10 : maxLength + 2; // 최소 너비를 10으로 설정하고, 최대 길이에 2를 더하여 조정
+      });
+
+      loadImageAsArrayBuffer('/assets/images/alpaco-officialseal.png')
+        .then(arrayBuffer => {
+          const logoImageId = workbook.addImage({
+            buffer: arrayBuffer,
+            extension: 'png',
+          });
+
+          worksheet2.addImage(logoImageId, {
+            tl: { col: 1, row: worksheet2.lastRow.number + 2 },
+            ext: { width: 220 / 1.5, height: 71 / 1.5 }
+          });
+
+          // Excel 파일 다운로드
+          workbook.xlsx.writeBuffer()
+            .then(buffer => {
+              const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+              // Trigger file download
+              const link = document.createElement('a');
+              link.href = window.URL.createObjectURL(blob);
+              link.download = 'output_with_images.xlsx';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            })
+            .catch(error => {
+              console.error('Error creating Excel file:', error);
+            });
+        })
+        .catch(error => {
+          console.error('Error loading image:', error);
+        });
+    }
+
+
+  </script>
+</body>
+
+</html>
