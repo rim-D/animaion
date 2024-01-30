@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.download-group {
+      clear: both;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0 0 1em 0;
+    }
+
+    div.download-group:after,
+    div.download-group div.option:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    div.download-group div.option {
+      clear: both;
+      padding: 0.5em 0;
+      border-bottom: 1px solid #ddd;
+      min-height: 29px;
+      line-height: 29px;
+    }
+
+    div.download-group div.option:last-child {
+      border-bottom: none;
+    }
+
+    div.download-group div.option:nth-child(even),
+    div.download-group div.option.shaded {
+      background-color: #f9f9f9;
+    }
+
+    div.download-group div.name {
+      float: left;
+      width: 25%;
+      font-weight: bold;
+      box-sizing: border-box;
+      padding-left: 0.5em;
+    }
+
+    div.download-group div.level2 div.name {
+      padding-left: 2em;
+      font-weight: normal;
+    }
+
+    div.download-group div.level3 div.name {
+      padding-left: 4em;
+      font-weight: normal;
+    }
+
+    div.download-group div.name input {
+      display: none;
+    }
+
+    div.download-group div.name input+label>span.check {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      border: 0.5em solid #ccc;
+      border-radius: 1em;
+      height: 1em;
+      width: 1em;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+
+
+    div.download-group div.level2 div.name input+label>span.check {
+      font-size: 0.8em;
+    }
+
+    div.download-group div.level3 div.name input+label>span.check {
+      font-size: 0.7em;
+    }
+
+    div.download-group div.name input:checked+label>span.check {
+      border: 0.5em solid #458ae0;
+      background-color: #d0dded;
+    }
+
+    div.download-group div.name input:checked+label>span.check>span {
+      position: relative;
+      top: -10px;
+      left: 0px;
+    }
+
+    div.download-group div.name input:checked+label>span.check>span:after {
+      content: "✔";
+      display: block;
+      color: #001f47;
+      font-size: 2em;
+    }
+
+    div.download-group div.description {
+      float: left;
+      width: 65%;
+    }
+
+    div.download-group div.description div.editor-info {
+      font-size: 0.8em;
+      line-height: 1.45em;
+    }
+
+    div.download-group div.version {
+      float: left;
+      width: 10%;
+      text-align: right;
+      padding-right: 0.5em;
+      box-sizing: border-box;
+      font-size: 0.8em;
+    }
+
+    div.download-group span.version {
+      color: #ccc;
+    }
+
+    div.tabs>div {
+      padding: 2em 1em 1em 1em;
+    }
+
+    div.tabs h4 {
+      margin-top: 1.5em;
+    }
+
+    html.dark {background-color: #000; color: #fff;}
+
+    html.dark div.download-group div.option {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    html.dark div.download-group div.option:nth-child(even),
+    html.dark div.download-group div.option.shaded {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    html.dark div.download-group div.name input+label>span.check {
+      border: 0.5em solid #6d6d6d;
+    }
+
+    html.dark div.download-group div.name input:checked+label>span.check {
+      border: 0.5em solid #458ae0;
+      background-color: transparent;
+    }
+
+    html.dark div.download-group div.name input:checked+label>span.check>span:after {
+      color: white;
+      text-shadow: 1px 3px black;
+    }
+
+    html.dark div.download-group span.version {
+      color: #ccc;
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="download-group">
+    <div class="option level1">
+      <div class="name">
+        <input id="opt-21" type="checkbox" name="ColReorder" value="cr-1.7.0" data-shortname="cr"
+          data-longname="ColReorder" class="firstparty">
+        <label for="opt-21">
+          <span class="check"><span></span></span>
+          <span class="name">ColReorder</span>
+        </label>
+      </div>
+      <div class="description">Click-and-drag column reordering.</div>
+      <div class="version"><span class="version">v</span>1.7.0</div>
+    </div>
+  </div>
+</body>
+
+</html>
